@@ -1,0 +1,635 @@
+# ====================================
+# CBSystem Nachrichten für OP-Games.de
+# ====================================
+
+# Allgemeine Nachrichten
+general:
+  no-permission: "&cDu hast keine Berechtigung für diesen Befehl!"
+  player-not-found: "&cSpieler '{player}' nicht gefunden!"
+  player-not-online: "&cSpieler '{player}' ist nicht online!"
+  invalid-number: "&cUngültige Zahl: '{input}'"
+  invalid-amount: "&cUngültiger Betrag: '{amount}'"
+  command-cooldown: "&cBitte warte noch &e{time} &cSekunden!"
+  unknown-command: "&cUnbekannter Befehl! Verwende &e/cb help &cfür Hilfe."
+  plugin-reloaded: "&aPlugin wurde erfolgreich neu geladen!"
+  feature-disabled: "&cDieses Feature ist deaktiviert!"
+  database-error: "&cDatenbankfehler! Bitte kontaktiere einen Administrator."
+  plugin-info: "&6&lCBSystem &7- &eVersion 1.0.0 &7by OP-Games.de"
+
+# Plot-Nachrichten
+plot:
+  not-in-plot: "&cDu stehst nicht auf einem Plot!"
+  not-owner: "&cDu bist nicht der Besitzer dieses Plots!"
+  not-trusted: "&cDu hast keine Berechtigung für diesen Plot!"
+  no-permission: "&cDu hast keine Berechtigung für diese Aktion!"
+  already-claimed: "&cDieser Plot ist bereits beansprucht!"
+  not-claimed: "&cDieser Plot ist nicht beansprucht!"
+  
+  # Plot-Management
+  purchased: "&aPlot erfolgreich gekauft für &e{price}!"
+  purchase-error: "&cFehler beim Plot-Kauf! Bitte versuche es erneut."
+  insufficient-funds: "&cDu hast nicht genug Geld! Benötigt: &e{amount}"
+  max-plots-reached: "&cDu hast bereits die maximale Anzahl an Plots erreicht!"
+  
+  # Plot-Mitglieder
+  player-trusted: "&a{player} wurde zu deinem Plot hinzugefügt!"
+  player-untrusted: "&c{player} wurde von deinem Plot entfernt!"
+  already-trusted: "&cDieser Spieler ist bereits zu diesem Plot hinzugefügt!"
+  not-trusted-player: "&cDieser Spieler ist nicht zu diesem Plot hinzugefügt!"
+  cannot-trust-self: "&cDu kannst dich nicht selbst hinzufügen!"
+  trust-limit-reached: "&cMaximale Anzahl vertrauter Spieler erreicht!"
+  
+  # Plot-Teleportation
+  teleported-home: "&aTeleportiert zu deinem Plot!"
+  teleport-failed: "&cTeleportation fehlgeschlagen!"
+  no-plot-home: "&cDu hast kein Plot-Home gesetzt!"
+  
+  # Plot-GUI
+  menu-opened: "&aPlot-Menü geöffnet!"
+  trust-player-instruction: "&7Schreibe den Spielernamen in den Chat..."
+  untrust-player-instruction: "&7Schreibe den Spielernamen in den Chat..."
+  settings-coming-soon: "&eGroßstadt-Einstellungen kommen bald!"
+  delete-not-implemented: "&cGroßstadt-Löschung noch nicht implementiert!"
+
+# Home-Nachrichten
+home:
+  set: "&aHome &e'{name}' &awurde gesetzt!"
+  deleted: "&cHome &e'{name}' &cwurde gelöscht!"
+  teleported: "&aTeleportiert zu Home &e'{name}'&a!"
+  not-found: "&cHome &e'{name}' &cnicht gefunden!"
+  already-exists: "&cHome &e'{name}' &cexistiert bereits!"
+  max-homes: "&cDu hast bereits die maximale Anzahl an Homes ({max})!"
+  list-header: "&6&l=== Deine Homes ==="
+  list-entry: "&e{name} &7- &a{world} &7({x}, {y}, {z})"
+  list-empty: "&7Du hast noch keine Homes gesetzt."
+  insufficient-funds: "&cDu hast nicht genug Geld! Kosten: &e{cost}"
+  enter-name: "&7Schreibe den Home-Namen in den Chat..."
+  teleport-failed: "&cTeleportation zu Home fehlgeschlagen!"
+
+# Warp-Nachrichten
+warp:
+  teleported: "&aTeleportiert zu Warp &e'{name}'&a!"
+  not-found: "&cWarp &e'{name}' &cnicht gefunden!"
+  set: "&aWarp &e'{name}' &awurde gesetzt!"
+  deleted: "&cWarp &e'{name}' &cwurde gelöscht!"
+  already-exists: "&cWarp &e'{name}' &cexistiert bereits!"
+  list-header: "&6&l=== Verfügbare Warps ==="
+  list-entry: "&e{name} &7- &a{world}"
+  list-empty: "&7Keine Warps verfügbar."
+
+# Spawn-Nachrichten
+spawn:
+  teleported: "&aTeleportiert zum Spawn!"
+  not-set: "&cSpawn ist nicht gesetzt!"
+  set: "&aSpawn wurde gesetzt!"
+
+# Geld-Nachrichten
+money:
+  balance: "&7Dein Kontostand: &a{balance}"
+  balance-other: "&7Kontostand von &e{player}&7: &a{balance}"
+  sent: "&aDu hast &e{amount} &aan &e{player} &agesendet!"
+  received: "&aDu hast &e{amount} &avon &e{player} &aerhalten!"
+  insufficient: "&cDu hast nicht genug Geld!"
+  invalid-amount: "&cUngültiger Betrag!"
+  cannot-pay-self: "&cDu kannst dir nicht selbst Geld senden!"
+  transaction-failed: "&cTransaktion fehlgeschlagen!"
+  
+  # Pay-Command Usage
+  pay-usage: "&cVerwendung: &e/pay <spieler> <betrag> &7oder &e/pay * <betrag> &7für alle online Spieler"
+  
+  # Pay-All Command
+  pay-all-no-permission: "&cDu hast keine Berechtigung, allen Spielern Geld zu senden!"
+  pay-all-no-players: "&cEs sind keine anderen Spieler online!"
+  pay-all-insufficient: "&cDu hast nicht genug Geld! &7Benötigt: &e{total} &7| Aktuell: &e{balance} &7| Pro Spieler: &e{amount} &7| Spieler: &e{players}"
+  pay-all-confirmation: "&e&lBestätigung erforderlich! &7Du möchtest &e{amount} &7an &e{players} &7Spieler senden (Gesamt: &e{total}&7). &cDies ist ein großer Betrag!"
+  pay-all-success: "&aDu hast &e{amount} &aan &e{count} &aSpieler gesendet! &7Gesamt: &e{total}"
+  pay-all-failed: "&cFehler beim Senden an alle Spieler!"
+  received-from-all: "&aDu hast &e{amount} &avon &e{player} &aempfangen! &7(Pay-All)"
+  
+  # Admin-Befehle
+  set: "&aKontostand von &e{player} &awurde auf &e{amount} &agesetzt!"
+  set-money: "&aKontostand von &e{player} &awurde auf &e{amount} &agesetzt!"
+  added: "&a{amount} &awurde zu &e{player}s &aKonto hinzugefügt!"
+  removed: "&c{amount} &cwurde von &e{player}s &cKonto entfernt!"
+  
+  # Economy GUI
+  pay-amount-instruction: "&7Schreibe den Betrag in den Chat..."
+  transaction-history-coming-soon: "&eTransaktionsverlauf kommt bald!"
+  top-list-coming-soon: "&eReichenliste kommt bald!"
+  
+  # Eco-Command (Admin-Befehle)
+  eco:
+    no-permission: "&cDu hast keine Berechtigung für Economy-Admin-Befehle!"
+    player-not-found: "&cSpieler '{player}' nicht gefunden!"
+    invalid-amount: "&cUngültiger Betrag: '{amount}'"
+    invalid-subcommand: "&cUnbekannter Subbefehl: '{command}'"
+    
+    # Give/Add Befehle
+    give-success: "&a{amount} &awurde zu &e{player}s &aKonto hinzugefügt!"
+    give-success-self: "&a{amount} &awurde zu deinem Konto hinzugefügt!"
+    give-usage: "&cVerwendung: /eco give <spieler> <betrag>"
+    
+    # Take/Remove Befehle
+    take-success: "&c{amount} &cwurde von &e{player}s &cKonto entfernt!"
+    take-success-self: "&c{amount} &cwurde von deinem Konto entfernt!"
+    take-insufficient: "&c{player} hat nicht genug Geld! Aktuell: {balance}"
+    take-usage: "&cVerwendung: /eco take <spieler> <betrag>"
+    
+    # Set Befehle
+    set-success: "&aKontostand von &e{player} &awurde auf &e{amount} &agesetzt!"
+    set-success-self: "&aDein Kontostand wurde auf &e{amount} &agesetzt!"
+    set-usage: "&cVerwendung: /eco set <spieler> <betrag>"
+    
+    # Reset/Clear Befehle
+    reset-success: "&cKontostand von &e{player} &cwurde zurückgesetzt!"
+    reset-success-self: "&cDein Kontostand wurde zurückgesetzt!"
+    reset-usage: "&cVerwendung: /eco reset <spieler>"
+    
+    # Balance/Bal Befehle
+    balance-usage: "&cVerwendung: /eco balance <spieler>"
+    
+    # Top/Baltop Befehle
+    top-header: "&6&l=== Reichste Spieler ==="
+    top-entry: "&e{position}. &e{player} &7- &a{balance}"
+    top-empty: "&cKeine Spielerdaten gefunden!"
+    top-usage: "&cVerwendung: /eco top [anzahl]"
+    
+    # Reload
+    reload-success: "&aEconomy-System wurde neu geladen!"
+    reload-failed: "&cFehler beim Neu-Laden des Economy-Systems!"
+    
+    # Hilfe
+    help-header: "&6&l=== Economy-Admin Hilfe ==="
+    help-give: "&e/eco give <spieler> <betrag> &7- Geld hinzufügen"
+    help-take: "&e/eco take <spieler> <betrag> &7- Geld entfernen"
+    help-set: "&e/eco set <spieler> <betrag> &7- Geld setzen"
+    help-reset: "&e/eco reset <spieler> &7- Geld zurücksetzen"
+    help-balance: "&e/eco balance <spieler> &7- Kontostand anzeigen"
+    help-top: "&e/eco top [anzahl] &7- Reichste Spieler"
+    help-reload: "&e/eco reload &7- Economy-System neu laden"
+    
+    # Zusätzliche Nachrichten für EcoCommand
+    gave-money: "&aDu hast &e{amount} &aan &e{player} &agesendet! (Neuer Kontostand: &e{balance}&a)"
+    took-money: "&cDu hast &e{amount} &cvon &e{player} &centzogen! (Neuer Kontostand: &e{balance}&c)"
+    received-money: "&aDu hast &e{amount} &avon einem Administrator erhalten!"
+    money-taken: "&cDir wurden &e{amount} &cvon einem Administrator entzogen!"
+    balance-set: "&aDein Kontostand wurde von einem Administrator auf &e{amount} &agesetzt!"
+    balance-reset: "&eDein Kontostand wurde von einem Administrator zurückgesetzt auf &e{amount}&e!"
+    reset-money: "&aKontostand von &e{player} &awurde zurückgesetzt auf &e{amount}&a!"
+    insufficient-funds: "&c{player} hat nicht genug Geld! Aktuell: &e{balance} &c| Benötigt: &e{amount}"
+    top-coming-soon: "&eTop-Balance Liste kommt bald!"
+    config-reloaded: "&aEconomy-Config wurde neu geladen!"
+
+# TPA-Nachrichten
+tpa:
+  request-sent: "&aTeleportationsanfrage an &e{player} &agesendet!"
+  request-received: "&e{player} &amöchte sich zu dir teleportieren!"
+  request-received-here: "&e{player} &amöchte dich zu sich teleportieren!"
+  request-info: "&7Verwende &a/tpaccept &7oder &c/tpdeny"
+  accepted: "&aTeleportationsanfrage angenommen!"
+  denied: "&cTeleportationsanfrage abgelehnt!"
+  no-requests: "&cKeine ausstehenden Teleportationsanfragen!"
+  timeout: "&cTeleportationsanfrage abgelaufen!"
+  already-requested: "&cDu hast bereits eine Anfrage an diesen Spieler gesendet!"
+  cannot-request-self: "&cDu kannst keine Anfrage an dich selbst senden!"
+  max-requests: "&cDu hast die maximale Anzahl an Anfragen erreicht!"
+  manage-requests-coming-soon: "&eAnfragenverwaltung kommt bald!"
+
+# Back-Nachrichten
+back:
+  teleported: "&aTeleportiert zur letzten Position!"
+  no-location: "&cKeine vorherige Position gefunden!"
+  location-unsafe: "&cDie vorherige Position ist nicht sicher!"
+
+# Shop-Nachrichten
+shop:
+  opened: "&aShop geöffnet!"
+  item-bought: "&aDu hast &e{amount}x {item} &afür &e{price} &agekauft!"
+  item-sold: "&aDu hast &e{amount}x {item} &afür &e{price} &averkauft!"
+  insufficient-funds: "&cDu hast nicht genug Geld! Benötigt: &e{price}"
+  insufficient-items: "&cDu hast nicht genug Items!"
+  inventory-full: "&cDein Inventar ist voll!"
+  item-not-found: "&cItem nicht im Shop gefunden!"
+  buy-disabled: "&cKaufen ist für dieses Item deaktiviert!"
+  sell-disabled: "&cVerkaufen ist für dieses Item deaktiviert!"
+  sell-all-coming-soon: "&eVerkaufe-Alles Feature kommt bald!"
+  bulk-buy-coming-soon: "&eMassen-Kauf Feature kommt bald!"
+  no-items-to-sell: "&cKeine verkaufbaren Items gefunden!"
+  sell-all-success: "&aDu hast &e{amount} Items &afür &e{earnings} &averkauft!"
+  sell-all-failed: "&cFehler beim Verkaufen der Items!"
+  item-excluded: "&c{item} wurde vom Verkauf ausgeschlossen!"
+  all-items-deselected: "&cAlle Items wurden abgewählt!"
+  filter-coming-soon: "&eFilter-Funktionen kommen bald!"
+
+# Admin-Nachrichten
+admin:
+  fly-enabled: "&aFlugmodus aktiviert!"
+  fly-disabled: "&cFlugmodus deaktiviert!"
+  fly-enabled-other: "&aFlugmodus für &e{player} &aaktiviert!"
+  fly-disabled-other: "&cFlugmodus für &e{player} &cdeaktiviert!"
+  
+  gamemode-changed: "&aSpielmodus zu &e{gamemode} &ageändert!"
+  gamemode-changed-other: "&aSpielmodus von &e{player} &azu &e{gamemode} &ageändert!"
+  
+  healed: "&aDu wurdest geheilt!"
+  healed-other: "&e{player} &awurde geheilt!"
+  
+  fed: "&aDu wurdest gesättigt!"
+  fed-other: "&e{player} &awurde gesättigt!"
+  
+  # Admin GUI Nachrichten
+  player-management-coming-soon: "&eSpielerverwaltung kommt bald!"
+  economy-management-coming-soon: "&eWirtschaftsverwaltung kommt bald!"
+  plot-management-coming-soon: "&eGroßstadtverwaltung kommt bald!"
+  server-settings-coming-soon: "&eServer-Einstellungen kommen bald!"
+  backup-coming-soon: "&eBackup-System kommt bald!"
+  logs-coming-soon: "&eLog-Viewer kommt bald!"
+  broadcast-instruction: "&7Schreibe deine Nachricht in den Chat..."
+  world-management-coming-soon: "&eWeltverwaltung kommt bald!"
+  teleport-tools-coming-soon: "&eTeleport-Tools kommen bald!"
+  maintenance-enabled: "&cWartungsmodus aktiviert!"
+  maintenance-disabled: "&aWartungsmodus deaktiviert!"
+  reload-failed: "&cFehler beim Neu-Laden des Plugins!"
+  server-stats-header: "&6&l=== Server-Statistiken ==="
+  
+  # Player Management
+  teleported-to-player: "&aTeleportiert zu &e{player}&a!"
+  player-teleported-to-you: "&e{player} &awurde zu dir teleportiert!"
+  teleported-to-admin: "&aDu wurdest zu &e{admin} &ateleportiert!"
+  player-kicked: "&e{player} &cwurde gekickt!"
+  player-banned: "&e{player} &4wurde gebannt!"
+  inventory-cleared-other: "&aInventar von &e{player} &awurde geleert!"
+  inventory-cleared: "&cDein Inventar wurde von einem Administrator geleert!"
+  enter-player-name: "&7Schreibe den Spielernamen in den Chat..."
+  offline-player-search-coming-soon: "&eOffline-Spieler-Suche kommt bald!"
+  server-stats-coming-soon: "&eServer-Statistiken kommen bald!"
+  emergency-actions-coming-soon: "&eNotfall-Aktionen kommen bald!"
+  tempban-coming-soon: "&eTemp-Ban System kommt bald!"
+  money-set-coming-soon: "&eGeld-Setzen Feature kommt bald!"
+  money-give-coming-soon: "&eGeld-Geben Feature kommt bald!"
+  money-take-coming-soon: "&eGeld-Entziehen Feature kommt bald!"
+  player-logs-coming-soon: "&eSpieler-Logs kommen bald!"
+
+# GUI-Nachrichten
+gui:
+  # Plot-GUI
+  plot-menu:
+    title: "&8Plot-Menü"
+    info:
+      name: "&6Plot-Informationen"
+      lore:
+        - "&7Besitzer: &e{owner}"
+        - "&7Vertraute: &e{trusted}"
+        - "&7Erstellt: &e{created}"
+        - ""
+        - "&aLinksklick: &7Plot-Home"
+    trust:
+      name: "&aSpieler vertrauen"
+      lore:
+        - "&7Füge einen Spieler zu"
+        - "&7deinem Plot hinzu."
+        - ""
+        - "&aLinksklick: &7Spieler hinzufügen"
+    untrust:
+      name: "&cSpieler entfernen"
+      lore:
+        - "&7Entferne einen Spieler"
+        - "&7von deinem Plot."
+        - ""
+        - "&cLinksklick: &7Spieler entfernen"
+    settings:
+      name: "&6Plot-Einstellungen"
+      lore:
+        - "&7Verwalte deine"
+        - "&7Plot-Einstellungen."
+        - ""
+        - "&6Linksklick: &7Einstellungen öffnen"
+    delete:
+      name: "&cPlot löschen"
+      lore:
+        - "&7Lösche dein Plot"
+        - "&7unwiderruflich."
+        - ""
+        - "&cLinksklick: &7Plot löschen"
+        - "&c&lVorsicht: Nicht rückgängig machbar!"
+  
+  # Shop-GUI
+  shop-menu:
+    title: "&6&lShop &8- &7OP-Games.de"
+    category:
+      blocks:
+        name: "&aBaublöcke"
+        lore:
+          - "&7Alle Arten von Blöcken"
+          - "&7zum Bauen und Dekorieren."
+          - ""
+          - "&aLinksklick: &7Kategorie öffnen"
+      tools:
+        name: "&bWerkzeuge"
+        lore:
+          - "&7Werkzeuge für alle"
+          - "&7deine Bedürfnisse."
+          - ""
+          - "&bLinksklick: &7Kategorie öffnen"
+      food:
+        name: "&eEssen"
+        lore:
+          - "&7Nahrung um dich"
+          - "&7satt zu halten."
+          - ""
+          - "&eLinksklick: &7Kategorie öffnen"
+  
+  # Allgemeine GUI-Elemente
+  back:
+    name: "&cZurück"
+    lore:
+      0: "&7Zurück zum vorherigen Menü"
+  close:
+    name: "&cSchließen"
+    lore:
+      0: "&7Menü schließen"
+  next-page:
+    name: "&aNächste Seite"
+    lore:
+      0: "&7Seite {page} von {maxpage}"
+  previous-page:
+    name: "&cVorherige Seite"
+    lore:
+      0: "&7Seite {page} von {maxpage}"
+  
+  # Text Input
+  text-input:
+    instruction: "&7Schreibe deine Eingabe in den Chat..."
+  
+  # Auktionshaus-GUI
+  auction-house:
+    title: "&6&lAuktionshaus &8- &7OP-Games.de"
+    browse:
+      name: "&aAuktionen durchsuchen"
+      lore:
+        - "&7Durchsuche alle verfügbaren"
+        - "&7Auktionen nach Kategorien."
+        - ""
+        - "&aLinksklick: &7Auktionen öffnen"
+    my-auctions:
+      name: "&eMeine Auktionen"
+      lore:
+        - "&7Verwalte deine eigenen"
+        - "&7Auktionen."
+        - ""
+        - "&eLinksklick: &7Meine Auktionen"
+    create-auction:
+      name: "&6Neue Auktion"
+      lore:
+        - "&7Erstelle eine neue"
+        - "&7Auktion."
+        - ""
+        - "&6Linksklick: &7Auktion erstellen"
+    search:
+      name: "&bSuche"
+      lore:
+        - "&7Suche nach bestimmten"
+        - "&7Items oder Verkäufern."
+        - ""
+        - "&bLinksklick: &7Suche öffnen"
+  
+  # Meine Auktionen GUI
+  my-auctions:
+    title: "&e&lMeine Auktionen"
+    no-auctions:
+      name: "&cKeine Auktionen"
+      lore:
+        - "&7Du hast noch keine"
+        - "&7Auktionen erstellt."
+    auction-item:
+      name: "&e{item}"
+      lore:
+        - "&7Preis: &a{price}"
+        - "&7Verbleibend: &b{time}"
+        - "&7Status: &e{status}"
+        - ""
+        - "&cRechtsklick: &7Auktion stornieren"
+  
+  # Auktion erstellen GUI
+  create-auction:
+    title: "&6&lAuktion erstellen"
+    select-item:
+      name: "&eItem auswählen"
+      lore:
+        - "&7Halte das Item in der Hand,"
+        - "&7das du versteigern möchtest."
+    set-price:
+      name: "&aPreis setzen"
+      lore:
+        - "&7Aktueller Preis: &e{price}"
+        - ""
+        - "&aLinksklick: &7Preis erhöhen"
+        - "&cRechtsklick: &7Preis verringern"
+        - "&eShift+Klick: &7Preis eingeben"
+    set-duration:
+      name: "&bDauer setzen"
+      lore:
+        - "&7Aktuelle Dauer: &e{duration}"
+        - ""
+        - "&aLinksklick: &7Dauer erhöhen"
+        - "&cRechtsklick: &7Dauer verringern"
+    create-button:
+      name: "&a&lAuktion erstellen"
+      lore:
+        - "&7Erstelle die Auktion"
+        - "&7mit den aktuellen"
+        - "&7Einstellungen."
+        - ""
+        - "&aLinksklick: &7Auktion erstellen"
+    cancel-button:
+      name: "&c&lAbbrechen"
+      lore:
+        - "&7Breche die Erstellung"
+        - "&7der Auktion ab."
+        - ""
+        - "&cLinksklick: &7Abbrechen"
+
+# Teleportation-Nachrichten
+teleport:
+  starting: "&7Teleportation startet in &e{delay} &7Sekunden..."
+  cancelled-moved: "&cTeleportation abgebrochen! Du hast dich bewegt."
+  cancelled-damaged: "&cTeleportation abgebrochen! Du wurdest verletzt."
+  success: "&aTeleportation erfolgreich!"
+  
+# Cooldown-Nachrichten
+cooldown:
+  active: "&cBitte warte noch &e{time} &cSekunden!"
+  expired: "&aCooldown abgelaufen!"
+
+# Error-Nachrichten
+error:
+  command-failed: "&cBefehl fehlgeschlagen! Bitte versuche es erneut."
+  unexpected: "&cEin unerwarteter Fehler ist aufgetreten!"
+  world-not-found: "&cWelt '{world}' nicht gefunden!"
+  location-unsafe: "&cDie Zielposition ist nicht sicher!"
+  teleport-failed: "&cTeleportation fehlgeschlagen!"
+
+# Help-Nachrichten
+help:
+  header: "&6&l=== CBSystem Hilfe ==="
+  footer: "&7Für mehr Informationen: &e/cb help <befehl>"
+  command-format: "&e{command} &7- &f{description}"
+  
+  # Befehl-spezifische Hilfe
+  plot:
+    - "&e/plot &7- Öffnet das Plot-Menü"
+    - "&e/plot home &7- Teleportiert zu deinem Plot"
+    - "&e/plot trust <spieler> &7- Vertraut einem Spieler"
+    - "&e/plot untrust <spieler> &7- Entfernt Vertrauen"
+    - "&e/plot info &7- Zeigt Plot-Informationen"
+  
+  home:
+    - "&e/home [name] &7- Teleportiert zu einem Home"
+    - "&e/sethome [name] &7- Setzt ein Home"
+    - "&e/delhome <name> &7- Löscht ein Home"
+    - "&e/homes &7- Liste aller Homes"
+  
+  money:
+    - "&e/money &7- Zeigt dein Guthaben"
+    - "&e/pay <spieler> <betrag> &7- Sendet Geld"
+    - "&e/money top &7- Reichsten Spieler"
+
+# Bestätigung-Nachrichten
+confirm:
+  plot-delete: "&cBist du sicher, dass du dein Plot löschen möchtest?"
+  plot-delete-confirm: "&7Verwende &c/plot delete confirm &7zum Bestätigen"
+  action-confirmed: "&aAktion bestätigt!"
+  action-cancelled: "&cAktion abgebrochen!"
+  timeout: "&cBestätigung abgelaufen!"
+
+
+
+# Auktionshaus-Nachrichten
+auction:
+  # Allgemeine Nachrichten
+  created: "&aAuktion erstellt! Item: &e{item} &a| Preis: &e{price} &a| Steuer: &c{tax}"
+  purchased: "&aDu hast &e{item} &afür &e{price} &avon &e{seller} &agekauft!"
+  sold: "&aDein &e{item} &afür &e{price} &awurde an &e{buyer} &averkauft!"
+  cancelled: "&cAuktion für &e{item} &cwurde storniert!"
+  not-found: "&cAuktion nicht gefunden!"
+  already-sold: "&cDiese Auktion wurde bereits verkauft!"
+  expired: "&cDiese Auktion ist abgelaufen!"
+  cannot-buy-own: "&cDu kannst deine eigenen Auktionen nicht kaufen!"
+  cannot-bid-own: "&cDu kannst nicht auf deine eigenen Auktionen bieten!"
+  not-your-auction: "&cDas ist nicht deine Auktion!"
+  insufficient-funds: "&cDu hast nicht genug Geld! Benötigt: &e{amount}"
+  insufficient-funds-tax: "&cDu hast nicht genug Geld für die Steuer! Benötigt: &e{tax}"
+  inventory-full: "&cDein Inventar ist voll!"
+  item-not-found: "&cItem nicht in deinem Inventar gefunden!"
+  no-item-in-hand: "&cDu musst ein Item in der Hand halten!"
+  invalid-item: "&cUngültiges Item!"
+  invalid-price: "&cUngültiger Preis!"
+  invalid-amount: "&cUngültiger Betrag!"
+  invalid-id: "&cUngültige Auktions-ID!"
+  invalid-duration: "&cUngültige Dauer!"
+  max-auctions-reached: "&cDu hast bereits die maximale Anzahl an Auktionen erreicht! ({max})"
+  bid-too-low: "&cDein Gebot ist zu niedrig! Mindestens: &e{current}"
+  bid-success: "&aGebot erfolgreich abgegeben! Item: &e{item} &a| Betrag: &e{amount}"
+  
+  # Expired Auctions
+  expired-returned: "&eDein abgelaufenes Item &e{item} &ewurde zurückgegeben!"
+  expired-dropped: "&eDein abgelaufenes Item &e{item} &ewurde gedroppt (Inventar voll)!"
+  item-dropped: "&eItem wurde gedroppt (Inventar voll)!"
+  
+  # Listen und Suche
+  no-auctions: "&cKeine aktiven Auktionen gefunden!"
+  no-my-auctions: "&cDu hast keine aktiven Auktionen!"
+  search-no-results: "&cKeine Ergebnisse für &e'{term}' &cgefunden!"
+  search-results: "&a{count} &aErgebnisse für &e'{term}'&a:"
+  list-header: "&6&l=== Aktive Auktionen ({count}) ==="
+  list-item: "&e#{id} &7- &e{item} &7| &a{price} &7| &e{seller} &7| &b{time}"
+  list-more: "&7... und {remaining} weitere Auktionen"
+  my-auctions-header: "&6&l=== Deine Auktionen ({count}) ==="
+  my-auction-item: "&e#{id} &7- &e{item} &7| &a{price} &7| &b{time}"
+  
+  # Info
+  info-header: "&6&l=== Auktion #{id} ==="
+  info-item: "&7Item: &e{item}"
+  info-price: "&7Preis: &a{price}"
+  info-seller: "&7Verkäufer: &e{seller}"
+  info-time: "&7Verbleibend: &b{time}"
+  info-sold: "&cStatus: &cVerkauft"
+  info-expired: "&cStatus: &cAbgelaufen"
+  
+  # Hilfe
+  help-header: "&6&l=== Auktionshaus Hilfe ==="
+  help-create: "&e/auction create <preis> [stunden] &7- Erstelle eine Auktion"
+  help-buy: "&e/auction buy <id> &7- Kaufe eine Auktion"
+  help-cancel: "&e/auction cancel <id> &7- Kündige eine Auktion"
+  help-list: "&e/auction list &7- Zeige alle Auktionen"
+  help-my: "&e/auction my &7- Zeige deine Auktionen"
+  help-search: "&e/auction search <begriff> &7- Suche Auktionen"
+  help-info: "&e/auction info <id> &7- Zeige Auktionsdetails"
+  
+  # GUI Hilfe
+  gui-help-header: "&6&l=== Auktionshaus Hilfe ==="
+  gui-help-click-buy: "&e• &7Klicke auf Auktionen zum Kaufen"
+  gui-help-shift-details: "&e• &7Shift+Klick für Details"
+  gui-help-right-cancel: "&e• &7Rechtsklick auf eigene Auktionen zum Abbrechen"
+  
+  # Command Usage
+  create-usage: "&cVerwendung: /auction create <preis> [stunden]"
+  buy-usage: "&cVerwendung: /auction buy <id>"
+  cancel-usage: "&cVerwendung: /auction cancel <id>"
+  search-usage: "&cVerwendung: /auction search <begriff>"
+  info-usage: "&cVerwendung: /auction info <id>"
+  bid-usage: "&cVerwendung: /bid <auction-id> <betrag>"
+  
+  # Subcommands
+  unknown-subcommand: "&cUnbekannter Subbefehl: &e{command}"
+  
+  # GUI-spezifische Nachrichten
+  filter-coming-soon: "&eFilter-Funktionen kommen bald!"
+  sorting-coming-soon: "&eSortier-Funktionen kommen bald!"
+  no-active-auctions: "&cDu hast keine aktiven Auktionen!"
+  cancelled-all: "&aAlle Auktionen wurden abgebrochen! &7({count} Auktionen)"
+  cancel-all-failed: "&cFehler beim Abbrechen aller Auktionen!"
+  
+  # Create Auction GUI
+  no-item-selected: "&cDu musst zuerst ein Item auswählen!"
+  no-price-selected: "&cDu musst zuerst einen Preis setzen!"
+  enter-custom-price: "&7Schreibe den gewünschten Preis in den Chat..."
+  custom-price-coming-soon: "&eBenutzerdefinierte Preis-Eingabe kommt bald!"
+
+
+
+# CB-Command-Nachrichten
+cb:
+  # Hauptmenü
+  main-menu-opened: "&aCBSystem Hauptmenü geöffnet!"
+  
+  # Hilfe
+  help-header: "&6&l=== CBSystem Hilfe ==="
+  help-info: "&e/cb info &7- Plugin-Informationen"
+  help-menu: "&e/cb menu &7- Hauptmenü öffnen"
+  help-reload: "&e/cb reload &7- Plugin neu laden (Admin)"
+  help-debug: "&e/cb debug &7- Debug-Informationen (Admin)"
+  
+  # Info
+  info-header: "&6&l=== CBSystem Info ==="
+  info-version: "&7Version: &e{version}"
+  info-author: "&7Autor: &e{author}"
+  info-website: "&7Website: &e{website}"
+  info-description: "&7Beschreibung: &f{description}"
+  
+  # Reload
+  reload-success: "&aCBSystem wurde erfolgreich neu geladen!"
+  reload-failed: "&cFehler beim Neu-Laden von CBSystem!"
+  reload-no-permission: "&cDu hast keine Berechtigung für /cb reload!"
+  
+  # Debug
+  debug-enabled: "&aDebug-Modus aktiviert!"
+  debug-disabled: "&cDebug-Modus deaktiviert!"
+  debug-no-permission: "&cDu hast keine Berechtigung für /cb debug!"
+  debug-info: "&7Debug-Informationen werden in der Konsole angezeigt."
+
+# Maintenance-Nachrichten
+maintenance:
+  enabled: "&cWartungsmodus aktiviert!"
+  disabled: "&aWartungsmodus deaktiviert!"
+  kick-message: "&cDer Server befindet sich im Wartungsmodus!"

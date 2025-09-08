@@ -1,0 +1,330 @@
+# ====================================
+# CBSystem Konfiguration für OP-Games.de
+# ====================================
+
+# Plugin-Einstellungen
+plugin:
+  prefix: "&8[&6CB&eSystem&8] &7"
+  debug: false
+  language: "de"
+  update-check: true
+
+# MySQL Datenbankverbindung
+database:
+  enabled: true
+  host: "localhost"
+  port: 3306
+  database: "cbsystem"
+  username: "root"
+  password: ""
+  # Verbindungspool-Einstellungen
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    maximum-lifetime: 1800000
+    connection-timeout: 5000
+    leak-detection-threshold: 60000
+
+# PlotSquared Integration
+plotsquared:
+  enabled: true
+  # Integration mit CBSystem Economy
+  economy-integration: true
+  # Erweiterte Plot-Features
+  features:
+    plot-chat: true
+    plot-info-gui: true
+    plot-management-gui: true
+    auto-merge-plots: false
+  # Plot-Preise (wenn Economy-Integration aktiviert)
+  prices:
+    claim-plot: 10000.0
+    additional-plot-multiplier: 1.5
+  # Plot-Limits für verschiedene Ränge
+  limits:
+    default:
+      max-plots: 3
+      max-members: 10
+    vip:
+      max-plots: 5
+      max-members: 15
+    premium:
+      max-plots: 10
+      max-members: 20
+
+# Home-System
+homes:
+  enabled: true
+  max-homes: 5
+  # Cooldown in Sekunden
+  teleport-cooldown: 3
+  # Kosten pro Home
+  cost-per-home: 5000.0
+
+# Spawn-System
+spawn:
+  enabled: true
+  teleport-cooldown: 3
+  # Spawn-Location (wird durch /setspawn gesetzt)
+  location:
+    world: "world"
+    x: 0.5
+    y: 100.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+# Warp-System
+warps:
+  enabled: true
+  teleport-cooldown: 5
+  # Standard-Warps beim ersten Start
+  default-warps:
+    spawn:
+      world: "world"
+      x: 0.5
+      y: 100.0
+      z: 0.5
+      yaw: 0.0
+      pitch: 0.0
+    shop:
+      world: "world"
+      x: 50.5
+      y: 100.0
+      z: 50.5
+      yaw: 90.0
+      pitch: 0.0
+
+# Wirtschaftssystem
+economy:
+  enabled: true
+  starting-balance: 1000.0
+  currency-symbol: "$"
+  currency-name: "Dollar"
+  currency-name-plural: "Dollar"
+  # Maximaler Betrag
+  max-balance: 999999999.0
+  # Pay-System
+  pay:
+    enabled: true
+    min-amount: 1.0
+    max-amount: 100000.0
+    tax-percentage: 0.0
+
+# Shop-System
+shop:
+  enabled: true
+  # GUI-Einstellungen
+  gui:
+    title: "&6&lShop &8- &7OP-Games.de"
+    size: 54
+  # Shop-Kategorien
+  categories:
+    blocks:
+      enabled: true
+      display-name: "&aBaublöcke"
+      icon: "GRASS_BLOCK"
+      slot: 10
+    tools:
+      enabled: true
+      display-name: "&bWerkzeuge"
+      icon: "DIAMOND_PICKAXE"
+      slot: 12
+    food:
+      enabled: true
+      display-name: "&eEssen"
+      icon: "BREAD"
+      slot: 14
+    redstone:
+      enabled: true
+      display-name: "&cRedstone"
+      icon: "REDSTONE"
+      slot: 16
+    decoration:
+      enabled: true
+      display-name: "&dDekoration"
+      icon: "FLOWER_POT"
+      slot: 28
+    rare:
+      enabled: true
+      display-name: "&6Seltene Items"
+      icon: "DIAMOND"
+      slot: 30
+
+# TPA-System (Teleportationsanfragen)
+tpa:
+  enabled: true
+  request-timeout: 60
+  teleport-delay: 3
+  max-requests: 5
+
+# Back-System
+back:
+  enabled: true
+  cooldown: 10
+  max-locations: 10
+
+# Sound-Einstellungen
+sounds:
+  enabled: true
+  # GUI-Sounds
+  gui:
+    click: "UI_BUTTON_CLICK"
+    success: "ENTITY_EXPERIENCE_ORB_PICKUP"
+    error: "ENTITY_VILLAGER_NO"
+    open: "BLOCK_CHEST_OPEN"
+    close: "BLOCK_CHEST_CLOSE"
+  # Teleportation-Sounds
+  teleport:
+    start: "ENTITY_ENDERMAN_TELEPORT"
+    success: "ENTITY_PLAYER_LEVELUP"
+    cancelled: "ENTITY_VILLAGER_NO"
+  # Geld-Sounds
+  money:
+    receive: "ENTITY_EXPERIENCE_ORB_PICKUP"
+    send: "ENTITY_ARROW_HIT_PLAYER"
+    insufficient: "ENTITY_VILLAGER_NO"
+
+# Nachrichten-System
+messages:
+  # Allgemeine Nachrichten
+  no-permission: "&cDu hast keine Berechtigung für diesen Befehl!"
+  player-not-found: "&cSpieler nicht gefunden!"
+  invalid-number: "&cUngültige Zahl!"
+  command-cooldown: "&cBitte warte noch &e{time} &cSekunden!"
+  
+  # Plot-Nachrichten
+  plot:
+    created: "&aPlot erfolgreich erstellt! &7(/plot home)"
+    deleted: "&cPlot wurde gelöscht!"
+    not-owner: "&cDu bist nicht der Besitzer dieses Plots!"
+    already-trusted: "&cDieser Spieler ist bereits vertraut!"
+    trusted-added: "&a{player} wurde zu deinem Plot hinzugefügt!"
+    trusted-removed: "&c{player} wurde von deinem Plot entfernt!"
+    no-plots: "&cDu hast keine Plots!"
+    max-plots: "&cDu hast bereits die maximale Anzahl an Plots!"
+    insufficient-money: "&cDu hast nicht genug Geld! Benötigt: &e{amount}$"
+    
+  # Home-Nachrichten
+  home:
+    set: "&aHome &e{name} &awurde gesetzt!"
+    deleted: "&cHome &e{name} &cwurde gelöscht!"
+    teleported: "&aTeleportiert zu Home &e{name}&a!"
+    not-found: "&cHome nicht gefunden!"
+    max-homes: "&cDu hast bereits die maximale Anzahl an Homes!"
+    
+  # Warp-Nachrichten
+  warp:
+    teleported: "&aTeleportiert zu &e{name}&a!"
+    not-found: "&cWarp nicht gefunden!"
+    set: "&aWarp &e{name} &awurde gesetzt!"
+    deleted: "&cWarp &e{name} &cwurde gelöscht!"
+    
+  # Geld-Nachrichten
+  money:
+    balance: "&7Dein Kontostand: &a{balance}$"
+    balance-other: "&7Kontostand von &e{player}&7: &a{balance}$"
+    sent: "&aDu hast &e{amount}$ &aan &e{player} &agesendet!"
+    received: "&aDu hast &e{amount}$ &avon &e{player} &aerhalten!"
+    insufficient: "&cDu hast nicht genug Geld!"
+    
+  # TPA-Nachrichten
+  tpa:
+    request-sent: "&aTeleportationsanfrage an &e{player} &agesendet!"
+    request-received: "&e{player} &amöchte sich zu dir teleportieren! &7(/tpaccept oder /tpdeny)"
+    accepted: "&aTeleportationsanfrage angenommen!"
+    denied: "&cTeleportationsanfrage abgelehnt!"
+    no-requests: "&cKeine Teleportationsanfragen vorhanden!"
+    timeout: "&cTeleportationsanfrage abgelaufen!"
+
+# GUI-Konfiguration
+gui:
+  # Allgemeine GUI-Einstellungen
+  fill-empty-slots: true
+  fill-item: "GRAY_STAINED_GLASS_PANE"
+  fill-item-name: "&7"
+  
+  # Plot-GUI
+  plot-menu:
+    title: "&8Plot-Menü"
+    size: 27
+    items:
+      info:
+        slot: 4
+        item: "PAPER"
+        name: "&6Plot-Informationen"
+        lore:
+          - "&7Besitzer: &e{owner}"
+          - "&7Vertraute: &e{trusted}"
+          - "&7Erstellt: &e{created}"
+          - ""
+          - "&aLinksklick: &7Plot-Home"
+      trust:
+        slot: 10
+        item: "PLAYER_HEAD"
+        name: "&aSpieler vertrauen"
+        lore:
+          - "&7Füge einen Spieler zu"
+          - "&7deinem Plot hinzu."
+          - ""
+          - "&aLinksklick: &7Spieler hinzufügen"
+      untrust:
+        slot: 12
+        item: "BARRIER"
+        name: "&cSpieler entfernen"
+        lore:
+          - "&7Entferne einen Spieler"
+          - "&7von deinem Plot."
+          - ""
+          - "&cLinksklick: &7Spieler entfernen"
+      settings:
+        slot: 14
+        item: "REDSTONE"
+        name: "&6Plot-Einstellungen"
+        lore:
+          - "&7Verwalte deine"
+          - "&7Plot-Einstellungen."
+          - ""
+          - "&6Linksklick: &7Einstellungen öffnen"
+      delete:
+        slot: 16
+        item: "TNT"
+        name: "&cPlot löschen"
+        lore:
+          - "&7Lösche dein Plot"
+          - "&7unwiderruflich."
+          - ""
+          - "&cLinksklick: &7Plot löschen"
+          - "&c&lVorsicht: Nicht rückgängig machbar!"
+
+# Admin-Einstellungen
+admin:
+  # Wartungsbefehl
+  maintenance:
+    enabled: false
+    message: "&cDer Server befindet sich im Wartungsmodus!"
+  
+  # Logging
+  logging:
+    enabled: true
+    log-commands: true
+    log-teleports: true
+    log-money-transactions: true
+    log-plot-actions: true
+
+# Performance-Einstellungen
+performance:
+  # Automatische Speicherung
+  auto-save:
+    enabled: true
+    interval: 300 # Sekunden
+  
+  # Cache-Einstellungen
+  cache:
+    player-data-cache-time: 600 # Sekunden
+    plot-cache-time: 300 # Sekunden
+    
+  # Async-Verarbeitung
+  async:
+    database-operations: true
+    file-operations: true

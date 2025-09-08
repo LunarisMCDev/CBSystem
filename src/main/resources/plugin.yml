@@ -1,0 +1,235 @@
+name: CBSystem
+version: '1.0.0'
+description: Umfangreiches CityBuild System für OP-Games.de
+author: OP-Games.de
+website: https://op-games.de
+main: de.opgames.cbsystem.CBSystem
+api-version: '1.21'
+depend: [PlotSquared]
+softdepend: [PlaceholderAPI, Vault, WorldEdit]
+
+commands:
+  cb:
+    description: Hauptbefehl des CBSystems
+    usage: /cb <subcommand>
+    aliases: [cbsystem, citybuild]
+  plot:
+    description: Plot-Management Befehle
+    usage: /plot <subcommand>
+    aliases: [p, plots, grundstück]
+  home:
+    description: Home-System Befehle
+    usage: /home [name]
+    aliases: [h]
+  sethome:
+    description: Setze ein Home
+    usage: /sethome [name]
+  delhome:
+    description: Lösche ein Home
+    usage: /delhome <name>
+  warp:
+    description: Warp zu einem öffentlichen Punkt
+    usage: /warp <name>
+  setwarp:
+    description: Setze einen Warp (Admin)
+    usage: /setwarp <name>
+    permission: cbsystem.admin.setwarp
+  delwarp:
+    description: Lösche einen Warp (Admin)
+    usage: /delwarp <name>
+    permission: cbsystem.admin.delwarp
+  spawn:
+    description: Teleportiere zum Spawn
+    usage: /spawn
+  setspawn:
+    description: Setze den Spawn (Admin)
+    usage: /setspawn
+    permission: cbsystem.admin.setspawn
+  money:
+    description: Zeige dein Geld an
+    usage: /money [player]
+    aliases: [balance, bal, geld]
+  pay:
+    description: Sende Geld an einen Spieler
+    usage: /pay <player> <amount>
+    aliases: [zahlen]
+  shop:
+    description: Öffne den Shop
+    usage: /shop
+  tpa:
+    description: Teleportationsanfrage senden
+    usage: /tpa <player>
+  tpaccept:
+    description: Teleportationsanfrage annehmen
+    usage: /tpaccept
+    aliases: [tpyes]
+  tpdeny:
+    description: Teleportationsanfrage ablehnen
+    usage: /tpdeny
+    aliases: [tpno]
+  back:
+    description: Teleportiere zur letzten Position zurück
+    usage: /back
+  fly:
+    description: Aktiviere/Deaktiviere Flugmodus
+    usage: /fly [player]
+    permission: cbsystem.fly
+  gamemode:
+    description: Ändere Spielmodus
+    usage: /gamemode <mode> [player]
+    aliases: [gm]
+    permission: cbsystem.gamemode
+  heal:
+    description: Heile dich oder einen anderen Spieler
+    usage: /heal [player]
+    permission: cbsystem.heal
+  feed:
+    description: Sättige dich oder einen anderen Spieler
+    usage: /feed [player]
+    permission: cbsystem.feed
+  eco:
+    description: Economy-Admin Befehle
+    usage: /eco <subcommand>
+    permission: cbsystem.admin.economy
+  auction:
+    description: Auktionshaus Befehle
+    usage: /auction <subcommand>
+    aliases: [auctions, auktion]
+  ah:
+    description: Öffne das Auktionshaus
+    usage: /ah
+    aliases: [auctionhouse, auktionshaus]
+  bid:
+    description: Biete auf eine Auktion
+    usage: /bid <auction-id> <amount>
+  cancelauction:
+    description: Kündige eine eigene Auktion
+    usage: /cancelauction <auction-id>
+    aliases: [cancelauction, ca]
+
+permissions:
+  cbsystem.*:
+    description: Alle CBSystem Berechtigungen
+    default: op
+    children:
+      cbsystem.admin.*: true
+      cbsystem.user.*: true
+  
+  cbsystem.admin.*:
+    description: Alle Admin Berechtigungen
+    default: op
+    children:
+      cbsystem.admin.setwarp: true
+      cbsystem.admin.delwarp: true
+      cbsystem.admin.setspawn: true
+      cbsystem.admin.reload: true
+      cbsystem.admin.money.set: true
+      cbsystem.admin.money.add: true
+      cbsystem.admin.money.remove: true
+      cbsystem.admin.economy: true
+      cbsystem.admin.plot.admin: true
+      cbsystem.admin.auction: true
+      cbsystem.fly: true
+      cbsystem.gamemode: true
+      cbsystem.heal: true
+      cbsystem.feed: true
+  
+  cbsystem.user.*:
+    description: Alle User Berechtigungen
+    default: true
+    children:
+      cbsystem.plot.create: true
+      cbsystem.plot.delete: true
+      cbsystem.plot.trust: true
+      cbsystem.plot.untrust: true
+      cbsystem.plot.home: true
+      cbsystem.home.set: true
+      cbsystem.home.delete: true
+      cbsystem.home.use: true
+      cbsystem.warp.use: true
+      cbsystem.money.use: true
+      cbsystem.money.pay: true
+      cbsystem.money.pay.all: true
+      cbsystem.shop.use: true
+      cbsystem.tpa.use: true
+      cbsystem.back.use: true
+      cbsystem.auction.use: true
+      cbsystem.auction.create: true
+      cbsystem.auction.buy: true
+      cbsystem.auction.bid: true
+  
+  cbsystem.plot.create:
+    description: Plots erstellen
+    default: true
+  cbsystem.plot.delete:
+    description: Plots löschen
+    default: true
+  cbsystem.plot.trust:
+    description: Spieler zu Plots hinzufügen
+    default: true
+  cbsystem.plot.untrust:
+    description: Spieler von Plots entfernen
+    default: true
+  cbsystem.plot.home:
+    description: Zu Plot-Home teleportieren
+    default: true
+  cbsystem.home.set:
+    description: Homes setzen
+    default: true
+  cbsystem.home.delete:
+    description: Homes löschen
+    default: true
+  cbsystem.home.use:
+    description: Homes nutzen
+    default: true
+  cbsystem.warp.use:
+    description: Warps nutzen
+    default: true
+  cbsystem.money.use:
+    description: Geld-System nutzen
+    default: true
+  cbsystem.money.pay:
+    description: Geld senden
+    default: true
+  cbsystem.money.pay.all:
+    description: Geld an alle online Spieler senden
+    default: false
+  cbsystem.shop.use:
+    description: Shop nutzen
+    default: true
+  cbsystem.tpa.use:
+    description: TPA nutzen
+    default: true
+  cbsystem.back.use:
+    description: Back-Befehl nutzen
+    default: true
+  cbsystem.fly:
+    description: Flugmodus nutzen
+    default: op
+  cbsystem.gamemode:
+    description: Spielmodus ändern
+    default: op
+  cbsystem.heal:
+    description: Heilen
+    default: op
+  cbsystem.feed:
+    description: Sättigen
+    default: op
+  cbsystem.admin.economy:
+    description: Economy-Admin Befehle
+    default: op
+  cbsystem.admin.auction:
+    description: Auktionshaus-Admin Befehle
+    default: op
+  cbsystem.auction.use:
+    description: Auktionshaus nutzen
+    default: true
+  cbsystem.auction.create:
+    description: Auktionen erstellen
+    default: true
+  cbsystem.auction.buy:
+    description: Auktionen kaufen
+    default: true
+  cbsystem.auction.bid:
+    description: Auf Auktionen bieten
+    default: true
