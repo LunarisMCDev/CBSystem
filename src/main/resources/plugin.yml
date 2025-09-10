@@ -5,8 +5,8 @@ author: OP-Games.de
 website: https://op-games.de
 main: de.opgames.cbsystem.CBSystem
 api-version: '1.21'
-depend: [PlotSquared]
-softdepend: [PlaceholderAPI, Vault, WorldEdit]
+depend: [PlotSquared, Vault]
+softdepend: [PlaceholderAPI, WorldEdit]
 
 commands:
   cb:

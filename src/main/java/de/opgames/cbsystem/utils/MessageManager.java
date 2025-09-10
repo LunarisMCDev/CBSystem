@@ -28,16 +28,37 @@ public class MessageManager {
     }
     
     private void loadMessages() {
-        File messageFile = new File(plugin.getDataFolder(), "messages.yml");
+        String language = plugin.getConfigManager().getLanguage();
+        String messageFileName = "messages_" + language + ".yml";
+        
+        // Fallback auf Deutsch wenn Sprache nicht unterstützt wird
+        if (!language.equals("de") && !language.equals("en")) {
+            language = "de";
+            messageFileName = "messages_de.yml";
+        }
+        
+        File messageFile = new File(plugin.getDataFolder(), messageFileName);
         
         if (!messageFile.exists()) {
-            plugin.saveResource("messages.yml", false);
+            // Versuche die sprachspezifische Datei zu laden
+            if (plugin.getResource(messageFileName) != null) {
+                plugin.saveResource(messageFileName, false);
+            } else {
+                // Fallback auf Standard messages.yml
+                plugin.saveResource("messages.yml", false);
+                messageFile = new File(plugin.getDataFolder(), "messages.yml");
+            }
         }
         
         messages = YamlConfiguration.loadConfiguration(messageFile);
         
         // Load default messages from jar
-        InputStream defaultStream = plugin.getResource("messages.yml");
+        InputStream defaultStream = plugin.getResource(messageFileName);
+        if (defaultStream == null) {
+            // Fallback auf Standard messages.yml
+            defaultStream = plugin.getResource("messages.yml");
+        }
+        
         if (defaultStream != null) {
             YamlConfiguration defaultMessages = YamlConfiguration.loadConfiguration(
                 new InputStreamReader(defaultStream, StandardCharsets.UTF_8));
@@ -47,7 +68,7 @@ public class MessageManager {
         // Cache alle Nachrichten für bessere Performance
         cacheMessages();
         
-        plugin.getLogger().info("Nachrichten geladen! Sprache: " + plugin.getConfigManager().getLanguage());
+        plugin.getLogger().info("Messages loaded! Language: " + language);
     }
     
     private void cacheMessages() {

@@ -1,0 +1,473 @@
+# ====================================
+# CBSystem Messages for OP-Games.de (English)
+# ====================================
+
+# General Messages
+general:
+  no-permission: "&cYou don't have permission for this command!"
+  player-not-found: "&cPlayer '{player}' not found!"
+  player-not-online: "&cPlayer '{player}' is not online!"
+  invalid-number: "&cInvalid number: '{input}'"
+  invalid-amount: "&cInvalid amount: '{amount}'"
+  command-cooldown: "&cPlease wait &e{time} &cmore seconds!"
+  unknown-command: "&cUnknown command! Use &e/cb help &cfor help."
+  plugin-reloaded: "&aPlugin successfully reloaded!"
+  feature-disabled: "&cThis feature is disabled!"
+  database-error: "&cDatabase error! Please contact an administrator."
+  plugin-info: "&6&lCBSystem &7- &eVersion 1.0.1-SNAPSHOT &7by OP-Games.de"
+  economy-disabled: "&cEconomy system is disabled!"
+
+# Plot Messages
+plot:
+  not-in-plot: "&cYou are not standing on a plot!"
+  not-owner: "&cYou are not the owner of this plot!"
+  not-trusted: "&cYou don't have permission for this plot!"
+  no-permission: "&cYou don't have permission for this action!"
+  already-claimed: "&cThis plot is already claimed!"
+  not-claimed: "&cThis plot is not claimed!"
+  
+  # Plot Management
+  purchased: "&aPlot successfully purchased for &e{price}!"
+  purchase-error: "&cError during plot purchase! Please try again."
+  insufficient-funds: "&cYou don't have enough money! Required: &e{amount}"
+  max-plots-reached: "&cYou have already reached the maximum number of plots!"
+  
+  # Plot Members
+  player-trusted: "&a{player} has been added to your plot!"
+  player-untrusted: "&c{player} has been removed from your plot!"
+  already-trusted: "&cThis player is already added to this plot!"
+  not-trusted-player: "&cThis player is not added to this plot!"
+  cannot-trust-self: "&cYou can't add yourself!"
+  trust-limit-reached: "&cMaximum number of trusted players reached!"
+  
+  # Plot Teleportation
+  teleported-home: "&aTeleported to your plot!"
+  teleport-failed: "&cTeleportation failed!"
+  no-plot-home: "&cYou haven't set a plot home!"
+  
+  # Plot GUI
+  menu-opened: "&aPlot menu opened!"
+  trust-player-instruction: "&7Type the player name in chat..."
+  untrust-player-instruction: "&7Type the player name in chat..."
+  settings-coming-soon: "&eCity settings coming soon!"
+  delete-not-implemented: "&cCity deletion not implemented yet!"
+
+# Home Messages
+home:
+  set: "&aHome &e'{name}' &ahas been set!"
+  deleted: "&cHome &e'{name}' &chas been deleted!"
+  teleported: "&aTeleported to home &e'{name}'&a!"
+  not-found: "&cHome &e'{name}' &cnot found!"
+  already-exists: "&cHome &e'{name}' &calready exists!"
+  max-homes: "&cYou have already reached the maximum number of homes ({max})!"
+  list-header: "&6&l=== Your Homes ==="
+  list-entry: "&e{name} &7- &a{world} &7({x}, {y}, {z})"
+  list-empty: "&7You haven't set any homes yet."
+  insufficient-funds: "&cYou don't have enough money! Cost: &e{cost}"
+  enter-name: "&7Type the home name in chat..."
+  teleport-failed: "&cTeleportation to home failed!"
+
+# Warp Messages
+warp:
+  teleported: "&aTeleported to warp &e'{name}'&a!"
+  not-found: "&cWarp &e'{name}' &cnot found!"
+  set: "&aWarp &e'{name}' &ahas been set!"
+  deleted: "&cWarp &e'{name}' &chas been deleted!"
+  already-exists: "&cWarp &e'{name}' &calready exists!"
+  list-header: "&6&l=== Available Warps ==="
+  list-entry: "&e{name} &7- &a{world}"
+  list-empty: "&7No warps available."
+
+# Spawn Messages
+spawn:
+  teleported: "&aTeleported to spawn!"
+  not-set: "&cSpawn is not set!"
+  set: "&aSpawn has been set!"
+
+# Money Messages
+money:
+  balance: "&7Your balance: &a{balance}"
+  balance-other: "&7Balance of &e{player}&7: &a{balance}"
+  sent: "&aYou sent &e{amount} &ato &e{player}&a!"
+  received: "&aYou received &e{amount} &afrom &e{player}&a!"
+  insufficient: "&cYou don't have enough money!"
+  invalid-amount: "&cInvalid amount!"
+  cannot-pay-self: "&cYou can't send money to yourself!"
+  transaction-failed: "&cTransaction failed!"
+  
+  # Pay-Command Usage
+  pay-usage: "&cUsage: &e/pay <player> <amount> &7or &e/pay * <amount> &7for all online players"
+  
+  # Pay-All Command
+  pay-all-no-permission: "&cYou don't have permission to send money to all players!"
+  pay-all-no-players: "&cNo other players are online!"
+  pay-all-insufficient: "&cYou don't have enough money! &7Required: &e{total} &7| Current: &e{balance} &7| Per player: &e{amount} &7| Players: &e{players}"
+  pay-all-confirmation: "&e&lConfirmation required! &7You want to send &e{amount} &7to &e{players} &7players (Total: &e{total}&7). &cThis is a large amount!"
+  pay-all-success: "&aYou sent &e{amount} &ato &e{count} &aplayers! &7Total: &e{total}"
+  pay-all-failed: "&cError sending to all players!"
+  received-from-all: "&aYou received &e{amount} &afrom &e{player}&a! &7(Pay-All)"
+  
+  # Admin Commands
+  set: "&aBalance of &e{player} &ahas been set to &e{amount}&a!"
+  set-money: "&aBalance of &e{player} &ahas been set to &e{amount}&a!"
+  added: "&a{amount} &ahas been added to &e{player}'s &aaccount!"
+  removed: "&c{amount} &chas been removed from &e{player}'s &caccount!"
+  
+  # Economy GUI
+  pay-amount-instruction: "&7Type the amount in chat..."
+  transaction-history-coming-soon: "&eTransaction history coming soon!"
+  top-list-coming-soon: "&eRich list coming soon!"
+  
+  # Eco-Command (Admin Commands)
+  eco:
+    no-permission: "&cYou don't have permission for economy admin commands!"
+    player-not-found: "&cPlayer '{player}' not found!"
+    invalid-amount: "&cInvalid amount: '{amount}'"
+    invalid-subcommand: "&cUnknown subcommand: '{command}'"
+    
+    # Give/Add Commands
+    give-success: "&a{amount} &ahas been added to &e{player}'s &aaccount!"
+    give-success-self: "&a{amount} &ahas been added to your account!"
+    give-usage: "&cUsage: /eco give <player> <amount>"
+    
+    # Take/Remove Commands
+    take-success: "&c{amount} &chas been removed from &e{player}'s &caccount!"
+    take-success-self: "&c{amount} &chas been removed from your account!"
+    take-insufficient: "&c{player} doesn't have enough money! Current: {balance}"
+    take-usage: "&cUsage: /eco take <player> <amount>"
+    
+    # Set Commands
+    set-success: "&aBalance of &e{player} &ahas been set to &e{amount}&a!"
+    set-success-self: "&aYour balance has been set to &e{amount}&a!"
+    set-usage: "&cUsage: /eco set <player> <amount>"
+    
+    # Reset/Clear Commands
+    reset-success: "&cBalance of &e{player} &chas been reset!"
+    reset-success-self: "&cYour balance has been reset!"
+    reset-usage: "&cUsage: /eco reset <player>"
+    
+    # Balance/Bal Commands
+    balance-usage: "&cUsage: /eco balance <player>"
+    
+    # Top/Baltop Commands
+    top-header: "&6&l=== Richest Players ==="
+    top-entry: "&e{position}. &e{player} &7- &a{balance}"
+    top-empty: "&cNo player data found!"
+    top-usage: "&cUsage: /eco top [count]"
+    
+    # Reload
+    reload-success: "&aEconomy system has been reloaded!"
+    reload-failed: "&cError reloading economy system!"
+    
+    # Help
+    help-header: "&6&l=== Economy Admin Help ==="
+    help-give: "&e/eco give <player> <amount> &7- Add money"
+    help-take: "&e/eco take <player> <amount> &7- Remove money"
+    help-set: "&e/eco set <player> <amount> &7- Set money"
+    help-reset: "&e/eco reset <player> &7- Reset money"
+    help-balance: "&e/eco balance <player> &7- Show balance"
+    help-top: "&e/eco top [count] &7- Richest players"
+    help-reload: "&e/eco reload &7- Reload economy system"
+    
+    # Additional messages for EcoCommand
+    gave-money: "&aYou sent &e{amount} &ato &e{player}&a! (New balance: &e{balance}&a)"
+    took-money: "&cYou took &e{amount} &cfrom &e{player}&c! (New balance: &e{balance}&c)"
+    received-money: "&aYou received &e{amount} &afrom an administrator!"
+    money-taken: "&cYou had &e{amount} &ctaken by an administrator!"
+    balance-set: "&aYour balance was set to &e{amount} &aby an administrator!"
+    balance-reset: "&eYour balance was reset to &e{amount}&e by an administrator!"
+    reset-money: "&aBalance of &e{player} &ahas been reset to &e{amount}&a!"
+    insufficient-funds: "&c{player} doesn't have enough money! Current: &e{balance} &c| Required: &e{amount}"
+    top-coming-soon: "&eTop balance list coming soon!"
+    config-reloaded: "&aEconomy config has been reloaded!"
+
+# TPA Messages
+tpa:
+  request-sent: "&aTeleportation request sent to &e{player}&a!"
+  request-received: "&e{player} &awants to teleport to you!"
+  request-received-here: "&e{player} &awants to teleport you to them!"
+  request-info: "&7Use &a/tpaccept &7or &c/tpdeny"
+  accepted: "&aTeleportation request accepted!"
+  denied: "&cTeleportation request denied!"
+  no-requests: "&cNo pending teleportation requests!"
+  timeout: "&cTeleportation request expired!"
+  already-requested: "&cYou have already sent a request to this player!"
+  cannot-request-self: "&cYou can't send a request to yourself!"
+  max-requests: "&cYou have reached the maximum number of requests!"
+  manage-requests-coming-soon: "&eRequest management coming soon!"
+
+# Back Messages
+back:
+  teleported: "&aTeleported to last position!"
+  no-location: "&cNo previous position found!"
+  location-unsafe: "&cThe previous position is not safe!"
+
+# Shop Messages
+shop:
+  opened: "&aShop opened!"
+  item-bought: "&aYou bought &e{amount}x {item} &afor &e{price}&a!"
+  item-sold: "&aYou sold &e{amount}x {item} &afor &e{price}&a!"
+  insufficient-funds: "&cYou don't have enough money! Required: &e{price}"
+  insufficient-items: "&cYou don't have enough items!"
+  inventory-full: "&cYour inventory is full!"
+  item-not-found: "&cItem not found in shop!"
+  buy-disabled: "&cBuying is disabled for this item!"
+  sell-disabled: "&cSelling is disabled for this item!"
+  sell-all-coming-soon: "&eSell-All feature coming soon!"
+  bulk-buy-coming-soon: "&eBulk-buy feature coming soon!"
+  no-items-to-sell: "&cNo sellable items found!"
+  sell-all-success: "&aYou sold &e{amount} items &afor &e{earnings}&a!"
+  sell-all-failed: "&cError selling items!"
+  item-excluded: "&c{item} was excluded from selling!"
+  all-items-deselected: "&cAll items have been deselected!"
+  filter-coming-soon: "&eFilter functions coming soon!"
+
+# Admin Messages
+admin:
+  fly-enabled: "&aFly mode enabled!"
+  fly-disabled: "&cFly mode disabled!"
+  fly-enabled-other: "&aFly mode enabled for &e{player}&a!"
+  fly-disabled-other: "&cFly mode disabled for &e{player}&c!"
+  
+  gamemode-changed: "&aGame mode changed to &e{gamemode}&a!"
+  gamemode-changed-other: "&aGame mode of &e{player} &achanged to &e{gamemode}&a!"
+  
+  healed: "&aYou have been healed!"
+  healed-other: "&e{player} &ahas been healed!"
+  
+  fed: "&aYou have been fed!"
+  fed-other: "&e{player} &ahas been fed!"
+  
+  # Admin GUI Messages
+  player-management-coming-soon: "&ePlayer management coming soon!"
+  economy-management-coming-soon: "&eEconomy management coming soon!"
+  plot-management-coming-soon: "&eCity management coming soon!"
+  server-settings-coming-soon: "&eServer settings coming soon!"
+  backup-coming-soon: "&eBackup system coming soon!"
+  logs-coming-soon: "&eLog viewer coming soon!"
+  broadcast-instruction: "&7Type your message in chat..."
+  world-management-coming-soon: "&eWorld management coming soon!"
+  teleport-tools-coming-soon: "&eTeleport tools coming soon!"
+  maintenance-enabled: "&cMaintenance mode enabled!"
+  maintenance-disabled: "&aMaintenance mode disabled!"
+  reload-failed: "&cError reloading plugin!"
+  server-stats-header: "&6&l=== Server Statistics ==="
+  
+  # Player Management
+  teleported-to-player: "&aTeleported to &e{player}&a!"
+  player-teleported-to-you: "&e{player} &ahas been teleported to you!"
+  teleported-to-admin: "&aYou have been teleported to &e{admin}&a!"
+  player-kicked: "&e{player} &chas been kicked!"
+  player-banned: "&e{player} &4has been banned!"
+  inventory-cleared-other: "&aInventory of &e{player} &ahas been cleared!"
+  inventory-cleared: "&cYour inventory has been cleared by an administrator!"
+  enter-player-name: "&7Type the player name in chat..."
+  offline-player-search-coming-soon: "&eOffline player search coming soon!"
+  server-stats-coming-soon: "&eServer statistics coming soon!"
+  emergency-actions-coming-soon: "&eEmergency actions coming soon!"
+  tempban-coming-soon: "&eTemp-ban system coming soon!"
+  money-set-coming-soon: "&eMoney-set feature coming soon!"
+  money-give-coming-soon: "&eMoney-give feature coming soon!"
+  money-take-coming-soon: "&eMoney-take feature coming soon!"
+  player-logs-coming-soon: "&ePlayer logs coming soon!"
+
+# Auction House Messages
+auction:
+  # General Messages
+  created: "&aAuction created! Item: &e{item} &a| Price: &e{price} &a| Tax: &c{tax}"
+  purchased: "&aYou bought &e{item} &afor &e{price} &afrom &e{seller}&a!"
+  sold: "&aYour &e{item} &afor &e{price} &awas sold to &e{buyer}&a!"
+  cancelled: "&cAuction for &e{item} &chas been cancelled!"
+  not-found: "&cAuction not found!"
+  already-sold: "&cThis auction has already been sold!"
+  expired: "&cThis auction has expired!"
+  cannot-buy-own: "&cYou can't buy your own auctions!"
+  cannot-bid-own: "&cYou can't bid on your own auctions!"
+  not-your-auction: "&cThis is not your auction!"
+  insufficient-funds: "&cYou don't have enough money! Required: &e{amount}"
+  insufficient-funds-tax: "&cYou don't have enough money for the tax! Required: &e{tax}"
+  inventory-full: "&cYour inventory is full!"
+  item-not-found: "&cItem not found in your inventory!"
+  no-item-in-hand: "&cYou must hold an item in your hand!"
+  invalid-item: "&cInvalid item!"
+  invalid-price: "&cInvalid price!"
+  invalid-amount: "&cInvalid amount!"
+  invalid-id: "&cInvalid auction ID!"
+  invalid-duration: "&cInvalid duration!"
+  max-auctions-reached: "&cYou have already reached the maximum number of auctions! ({max})"
+  bid-too-low: "&cYour bid is too low! Minimum: &e{current}"
+  bid-success: "&aBid successfully placed! Item: &e{item} &a| Amount: &e{amount}"
+  
+  # Expired Auctions
+  expired-returned: "&eYour expired item &e{item} &ehas been returned!"
+  expired-dropped: "&eYour expired item &e{item} &ehas been dropped (inventory full)!"
+  item-dropped: "&eItem has been dropped (inventory full)!"
+  
+  # Lists and Search
+  no-auctions: "&cNo active auctions found!"
+  no-my-auctions: "&cYou have no active auctions!"
+  search-no-results: "&cNo results found for &e'{term}'&c!"
+  search-results: "&a{count} &aresults for &e'{term}'&a:"
+  list-header: "&6&l=== Active Auctions ({count}) ==="
+  list-item: "&e#{id} &7- &e{item} &7| &a{price} &7| &e{seller} &7| &b{time}"
+  list-more: "&7... and {remaining} more auctions"
+  my-auctions-header: "&6&l=== Your Auctions ({count}) ==="
+  my-auction-item: "&e#{id} &7- &e{item} &7| &a{price} &7| &b{time}"
+  
+  # Info
+  info-header: "&6&l=== Auction #{id} ==="
+  info-item: "&7Item: &e{item}"
+  info-price: "&7Price: &a{price}"
+  info-seller: "&7Seller: &e{seller}"
+  info-time: "&7Time left: &b{time}"
+  info-sold: "&cStatus: &cSold"
+  info-expired: "&cStatus: &cExpired"
+  
+  # Help
+  help-header: "&6&l=== Auction House Help ==="
+  help-create: "&e/auction create <price> [hours] &7- Create an auction"
+  help-buy: "&e/auction buy <id> &7- Buy an auction"
+  help-cancel: "&e/auction cancel <id> &7- Cancel an auction"
+  help-list: "&e/auction list &7- Show all auctions"
+  help-my: "&e/auction my &7- Show your auctions"
+  help-search: "&e/auction search <term> &7- Search auctions"
+  help-info: "&e/auction info <id> &7- Show auction details"
+  
+  # GUI Help
+  gui-help-header: "&6&l=== Auction House Help ==="
+  gui-help-click-buy: "&e• &7Click on auctions to buy"
+  gui-help-shift-details: "&e• &7Shift+Click for details"
+  gui-help-right-cancel: "&e• &7Right-click on own auctions to cancel"
+  
+  # Command Usage
+  create-usage: "&cUsage: /auction create <price> [hours]"
+  buy-usage: "&cUsage: /auction buy <id>"
+  cancel-usage: "&cUsage: /auction cancel <id>"
+  search-usage: "&cUsage: /auction search <term>"
+  info-usage: "&cUsage: /auction info <id>"
+  bid-usage: "&cUsage: /bid <auction-id> <amount>"
+  
+  # Subcommands
+  unknown-subcommand: "&cUnknown subcommand: &e{command}"
+  
+  # GUI-specific Messages
+  filter-coming-soon: "&eFilter functions coming soon!"
+  sorting-coming-soon: "&eSorting functions coming soon!"
+  no-active-auctions: "&cYou have no active auctions!"
+  cancelled-all: "&aAll auctions have been cancelled! &7({count} auctions)"
+  cancel-all-failed: "&cError cancelling all auctions!"
+  
+  # Create Auction GUI
+  no-item-selected: "&cYou must select an item first!"
+  no-price-selected: "&cYou must set a price first!"
+  enter-custom-price: "&7Type the desired price in chat..."
+  custom-price-coming-soon: "&eCustom price input coming soon!"
+
+# Bank System Messages
+bank:
+  # General Messages
+  balance-info: "&7Bank balance: &a{bank-balance} &7| Pocket money: &e{pocket-balance}"
+  deposit-success: "&aYou have successfully deposited &e{amount}&a!"
+  deposit-failed: "&cDeposit failed!"
+  deposit-usage: "&cUsage: &e/bank deposit <amount>"
+  deposit-help: "&7Use &e/bank deposit <amount> &7to deposit money"
+  withdraw-success: "&aYou have successfully withdrawn &e{amount}&a!"
+  withdraw-failed: "&cWithdrawal failed!"
+  withdraw-usage: "&cUsage: &e/bank withdraw <amount>"
+  withdraw-help: "&7Use &e/bank withdraw <amount> &7to withdraw money"
+  
+  # Loan Messages
+  loan-granted: "&aLoan of &e{amount} &afor &e{days} days &agranted!"
+  loan-failed: "&cLoan could not be granted!"
+  loan-usage: "&cUsage: &e/bank loan <amount> [days]"
+  loan-help: "&7Use &e/bank loan <amount> [days] &7to apply for a loan"
+  loan-too-large: "&cLoan too large! Maximum: &e{max-amount}"
+  loan-too-long: "&cLoan duration too long! Maximum: &e{max-days} days"
+  already-has-loan: "&cYou already have an active loan!"
+  no-active-loan: "&cYou don't have an active loan!"
+  
+  # Loan Repayment
+  payloan-success: "&aYou have paid &e{amount} &aon your loan!"
+  payloan-failed: "&cLoan repayment failed!"
+  payloan-usage: "&cUsage: &e/bank payloan <amount>"
+  payloan-help: "&7Use &e/bank payloan <amount> &7to repay your loan"
+  
+  # Error Messages
+  insufficient-bank-balance: "&cInsufficient bank balance! You only have &e{balance}&c, required: &e{amount}"
+  insufficient-pocket-balance: "&cInsufficient pocket money! You only have &e{balance}&c, required: &e{amount}"
+  
+  # Info Messages
+  info-header: "&6&l=== Bank Information ==="
+  loan-info: "&7Active loan: &c{remaining} &7of &e{original} &7| Due: &c{due-date}"
+  no-loan: "&7You don't have an active loan"
+  
+  # Help
+  help-header: "&6&l=== Bank Help ==="
+  help-balance: "&e/bank balance &7- Show balance"
+  help-deposit: "&e/bank deposit <amount> &7- Deposit money"
+  help-withdraw: "&e/bank withdraw <amount> &7- Withdraw money"
+  help-loan: "&e/bank loan <amount> [days] &7- Apply for loan"
+  help-payloan: "&e/bank payloan <amount> &7- Repay loan"
+  help-info: "&e/bank info &7- Detailed information"
+  
+  # GUI Messages
+  history-coming-soon: "&eTransaction history coming soon!"
+  stats-coming-soon: "&eBank statistics coming soon!"
+  
+  # Errors
+  invalid-subcommand: "&cInvalid subcommand: &e{command}"
+
+# Scoreboard System Messages
+scoreboard:
+  # General Messages
+  enabled: "&aScoreboard enabled!"
+  disabled: "&cScoreboard disabled!"
+  already-enabled: "&eScoreboard is already enabled!"
+  already-disabled: "&eScoreboard is already disabled!"
+  reloaded: "&aAll scoreboards have been reloaded!"
+  
+  # Help
+  help-header: "&6&l=== Scoreboard Help ==="
+  help-toggle: "&e/scoreboard toggle &7- Toggle scoreboard on/off"
+  help-on: "&e/scoreboard on &7- Enable scoreboard"
+  help-off: "&e/scoreboard off &7- Disable scoreboard"
+  help-reload: "&e/scoreboard reload &7- Reload scoreboards (Admin)"
+  
+  # Errors
+  invalid-subcommand: "&cInvalid subcommand: &e{command}"
+
+# CB-Command Messages
+cb:
+  # Main Menu
+  main-menu-opened: "&aCBSystem main menu opened!"
+  
+  # Help
+  help-header: "&6&l=== CBSystem Help ==="
+  help-info: "&e/cb info &7- Plugin information"
+  help-menu: "&e/cb menu &7- Open main menu"
+  help-reload: "&e/cb reload &7- Reload plugin (Admin)"
+  help-debug: "&e/cb debug &7- Debug information (Admin)"
+  
+  # Info
+  info-header: "&6&l=== CBSystem Info ==="
+  info-version: "&7Version: &e{version}"
+  info-author: "&7Author: &e{author}"
+  info-website: "&7Website: &e{website}"
+  info-description: "&7Description: &f{description}"
+  
+  # Reload
+  reload-success: "&aCBSystem has been successfully reloaded!"
+  reload-failed: "&cError reloading CBSystem!"
+  reload-no-permission: "&cYou don't have permission for /cb reload!"
+  
+  # Debug
+  debug-enabled: "&aDebug mode enabled!"
+  debug-disabled: "&cDebug mode disabled!"
+  debug-no-permission: "&cYou don't have permission for /cb debug!"
+  debug-info: "&7Debug information will be displayed in console."
+
+# Maintenance Messages
+maintenance:
+  enabled: "&cMaintenance mode enabled!"
+  disabled: "&aMaintenance mode disabled!"
+  kick-message: "&cThe server is in maintenance mode!"

@@ -1,5 +1,5 @@
 # ====================================
-# CBSystem Nachrichten für OP-Games.de
+# CBSystem Nachrichten für OP-Games.de (Deutsch)
 # ====================================
 
 # Allgemeine Nachrichten
@@ -15,6 +15,7 @@ general:
   feature-disabled: "&cDieses Feature ist deaktiviert!"
   database-error: "&cDatenbankfehler! Bitte kontaktiere einen Administrator."
   plugin-info: "&6&lCBSystem &7- &eVersion 1.0.1-SNAPSHOT &7by OP-Games.de"
+  economy-disabled: "&cEconomy-System ist deaktiviert!"
 
 # Plot-Nachrichten
 plot:
@@ -270,246 +271,12 @@ admin:
   money-take-coming-soon: "&eGeld-Entziehen Feature kommt bald!"
   player-logs-coming-soon: "&eSpieler-Logs kommen bald!"
 
-# GUI-Nachrichten
-gui:
-  # Plot-GUI
-  plot-menu:
-    title: "&8Plot-Menü"
-    info:
-      name: "&6Plot-Informationen"
-      lore:
-        - "&7Besitzer: &e{owner}"
-        - "&7Vertraute: &e{trusted}"
-        - "&7Erstellt: &e{created}"
-        - ""
-        - "&aLinksklick: &7Plot-Home"
-    trust:
-      name: "&aSpieler vertrauen"
-      lore:
-        - "&7Füge einen Spieler zu"
-        - "&7deinem Plot hinzu."
-        - ""
-        - "&aLinksklick: &7Spieler hinzufügen"
-    untrust:
-      name: "&cSpieler entfernen"
-      lore:
-        - "&7Entferne einen Spieler"
-        - "&7von deinem Plot."
-        - ""
-        - "&cLinksklick: &7Spieler entfernen"
-    settings:
-      name: "&6Plot-Einstellungen"
-      lore:
-        - "&7Verwalte deine"
-        - "&7Plot-Einstellungen."
-        - ""
-        - "&6Linksklick: &7Einstellungen öffnen"
-    delete:
-      name: "&cPlot löschen"
-      lore:
-        - "&7Lösche dein Plot"
-        - "&7unwiderruflich."
-        - ""
-        - "&cLinksklick: &7Plot löschen"
-        - "&c&lVorsicht: Nicht rückgängig machbar!"
-  
-  # Shop-GUI
-  shop-menu:
-    title: "&6&lShop &8- &7OP-Games.de"
-    category:
-      blocks:
-        name: "&aBaublöcke"
-        lore:
-          - "&7Alle Arten von Blöcken"
-          - "&7zum Bauen und Dekorieren."
-          - ""
-          - "&aLinksklick: &7Kategorie öffnen"
-      tools:
-        name: "&bWerkzeuge"
-        lore:
-          - "&7Werkzeuge für alle"
-          - "&7deine Bedürfnisse."
-          - ""
-          - "&bLinksklick: &7Kategorie öffnen"
-      food:
-        name: "&eEssen"
-        lore:
-          - "&7Nahrung um dich"
-          - "&7satt zu halten."
-          - ""
-          - "&eLinksklick: &7Kategorie öffnen"
-  
-  # Allgemeine GUI-Elemente
-  back:
-    name: "&cZurück"
-    lore:
-      0: "&7Zurück zum vorherigen Menü"
-  close:
-    name: "&cSchließen"
-    lore:
-      0: "&7Menü schließen"
-  next-page:
-    name: "&aNächste Seite"
-    lore:
-      0: "&7Seite {page} von {maxpage}"
-  previous-page:
-    name: "&cVorherige Seite"
-    lore:
-      0: "&7Seite {page} von {maxpage}"
-  
-  # Text Input
-  text-input:
-    instruction: "&7Schreibe deine Eingabe in den Chat..."
-  
-  # Auktionshaus-GUI
-  auction-house:
-    title: "&6&lAuktionshaus &8- &7OP-Games.de"
-    browse:
-      name: "&aAuktionen durchsuchen"
-      lore:
-        - "&7Durchsuche alle verfügbaren"
-        - "&7Auktionen nach Kategorien."
-        - ""
-        - "&aLinksklick: &7Auktionen öffnen"
-    my-auctions:
-      name: "&eMeine Auktionen"
-      lore:
-        - "&7Verwalte deine eigenen"
-        - "&7Auktionen."
-        - ""
-        - "&eLinksklick: &7Meine Auktionen"
-    create-auction:
-      name: "&6Neue Auktion"
-      lore:
-        - "&7Erstelle eine neue"
-        - "&7Auktion."
-        - ""
-        - "&6Linksklick: &7Auktion erstellen"
-    search:
-      name: "&bSuche"
-      lore:
-        - "&7Suche nach bestimmten"
-        - "&7Items oder Verkäufern."
-        - ""
-        - "&bLinksklick: &7Suche öffnen"
-  
-  # Meine Auktionen GUI
-  my-auctions:
-    title: "&e&lMeine Auktionen"
-    no-auctions:
-      name: "&cKeine Auktionen"
-      lore:
-        - "&7Du hast noch keine"
-        - "&7Auktionen erstellt."
-    auction-item:
-      name: "&e{item}"
-      lore:
-        - "&7Preis: &a{price}"
-        - "&7Verbleibend: &b{time}"
-        - "&7Status: &e{status}"
-        - ""
-        - "&cRechtsklick: &7Auktion stornieren"
-  
-  # Auktion erstellen GUI
-  create-auction:
-    title: "&6&lAuktion erstellen"
-    select-item:
-      name: "&eItem auswählen"
-      lore:
-        - "&7Halte das Item in der Hand,"
-        - "&7das du versteigern möchtest."
-    set-price:
-      name: "&aPreis setzen"
-      lore:
-        - "&7Aktueller Preis: &e{price}"
-        - ""
-        - "&aLinksklick: &7Preis erhöhen"
-        - "&cRechtsklick: &7Preis verringern"
-        - "&eShift+Klick: &7Preis eingeben"
-    set-duration:
-      name: "&bDauer setzen"
-      lore:
-        - "&7Aktuelle Dauer: &e{duration}"
-        - ""
-        - "&aLinksklick: &7Dauer erhöhen"
-        - "&cRechtsklick: &7Dauer verringern"
-    create-button:
-      name: "&a&lAuktion erstellen"
-      lore:
-        - "&7Erstelle die Auktion"
-        - "&7mit den aktuellen"
-        - "&7Einstellungen."
-        - ""
-        - "&aLinksklick: &7Auktion erstellen"
-    cancel-button:
-      name: "&c&lAbbrechen"
-      lore:
-        - "&7Breche die Erstellung"
-        - "&7der Auktion ab."
-        - ""
-        - "&cLinksklick: &7Abbrechen"
-
-# Teleportation-Nachrichten
-teleport:
-  starting: "&7Teleportation startet in &e{delay} &7Sekunden..."
-  cancelled-moved: "&cTeleportation abgebrochen! Du hast dich bewegt."
-  cancelled-damaged: "&cTeleportation abgebrochen! Du wurdest verletzt."
-  success: "&aTeleportation erfolgreich!"
-  
-# Cooldown-Nachrichten
-cooldown:
-  active: "&cBitte warte noch &e{time} &cSekunden!"
-  expired: "&aCooldown abgelaufen!"
-
-# Error-Nachrichten
-error:
-  command-failed: "&cBefehl fehlgeschlagen! Bitte versuche es erneut."
-  unexpected: "&cEin unerwarteter Fehler ist aufgetreten!"
-  world-not-found: "&cWelt '{world}' nicht gefunden!"
-  location-unsafe: "&cDie Zielposition ist nicht sicher!"
-  teleport-failed: "&cTeleportation fehlgeschlagen!"
-
-# Help-Nachrichten
-help:
-  header: "&6&l=== CBSystem Hilfe ==="
-  footer: "&7Für mehr Informationen: &e/cb help <befehl>"
-  command-format: "&e{command} &7- &f{description}"
-  
-  # Befehl-spezifische Hilfe
-  plot:
-    - "&e/plot &7- Öffnet das Plot-Menü"
-    - "&e/plot home &7- Teleportiert zu deinem Plot"
-    - "&e/plot trust <spieler> &7- Vertraut einem Spieler"
-    - "&e/plot untrust <spieler> &7- Entfernt Vertrauen"
-    - "&e/plot info &7- Zeigt Plot-Informationen"
-  
-  home:
-    - "&e/home [name] &7- Teleportiert zu einem Home"
-    - "&e/sethome [name] &7- Setzt ein Home"
-    - "&e/delhome <name> &7- Löscht ein Home"
-    - "&e/homes &7- Liste aller Homes"
-  
-  money:
-    - "&e/money &7- Zeigt dein Guthaben"
-    - "&e/pay <spieler> <betrag> &7- Sendet Geld"
-    - "&e/money top &7- Reichsten Spieler"
-
-# Bestätigung-Nachrichten
-confirm:
-  plot-delete: "&cBist du sicher, dass du dein Plot löschen möchtest?"
-  plot-delete-confirm: "&7Verwende &c/plot delete confirm &7zum Bestätigen"
-  action-confirmed: "&aAktion bestätigt!"
-  action-cancelled: "&cAktion abgebrochen!"
-  timeout: "&cBestätigung abgelaufen!"
-
-
-
 # Auktionshaus-Nachrichten
 auction:
   # Allgemeine Nachrichten
   created: "&aAuktion erstellt! Item: &e{item} &a| Preis: &e{price} &a| Steuer: &c{tax}"
   purchased: "&aDu hast &e{item} &afür &e{price} &avon &e{seller} &agekauft!"
-  sold: "&aDein &e{item} &afür &e{price} &awurde an &e{buyer} &averkauft!"
+  sold: "&aDein &e{item} &für &e{price} &awurde an &e{buyer} &averkauft!"
   cancelled: "&cAuktion für &e{item} &cwurde storniert!"
   not-found: "&cAuktion nicht gefunden!"
   already-sold: "&cDiese Auktion wurde bereits verkauft!"
@@ -596,38 +363,6 @@ auction:
   enter-custom-price: "&7Schreibe den gewünschten Preis in den Chat..."
   custom-price-coming-soon: "&eBenutzerdefinierte Preis-Eingabe kommt bald!"
 
-
-
-# CB-Command-Nachrichten
-cb:
-  # Hauptmenü
-  main-menu-opened: "&aCBSystem Hauptmenü geöffnet!"
-  
-  # Hilfe
-  help-header: "&6&l=== CBSystem Hilfe ==="
-  help-info: "&e/cb info &7- Plugin-Informationen"
-  help-menu: "&e/cb menu &7- Hauptmenü öffnen"
-  help-reload: "&e/cb reload &7- Plugin neu laden (Admin)"
-  help-debug: "&e/cb debug &7- Debug-Informationen (Admin)"
-  
-  # Info
-  info-header: "&6&l=== CBSystem Info ==="
-  info-version: "&7Version: &e{version}"
-  info-author: "&7Autor: &e{author}"
-  info-website: "&7Website: &e{website}"
-  info-description: "&7Beschreibung: &f{description}"
-  
-  # Reload
-  reload-success: "&aCBSystem wurde erfolgreich neu geladen!"
-  reload-failed: "&cFehler beim Neu-Laden von CBSystem!"
-  reload-no-permission: "&cDu hast keine Berechtigung für /cb reload!"
-  
-  # Debug
-  debug-enabled: "&aDebug-Modus aktiviert!"
-  debug-disabled: "&cDebug-Modus deaktiviert!"
-  debug-no-permission: "&cDu hast keine Berechtigung für /cb debug!"
-  debug-info: "&7Debug-Informationen werden in der Konsole angezeigt."
-
 # Bank-System-Nachrichten
 bank:
   # Allgemeine Nachrichten
@@ -700,6 +435,36 @@ scoreboard:
   
   # Fehler
   invalid-subcommand: "&cUngültiger Unterbefehl: &e{command}"
+
+# CB-Command-Nachrichten
+cb:
+  # Hauptmenü
+  main-menu-opened: "&aCBSystem Hauptmenü geöffnet!"
+  
+  # Hilfe
+  help-header: "&6&l=== CBSystem Hilfe ==="
+  help-info: "&e/cb info &7- Plugin-Informationen"
+  help-menu: "&e/cb menu &7- Hauptmenü öffnen"
+  help-reload: "&e/cb reload &7- Plugin neu laden (Admin)"
+  help-debug: "&e/cb debug &7- Debug-Informationen (Admin)"
+  
+  # Info
+  info-header: "&6&l=== CBSystem Info ==="
+  info-version: "&7Version: &e{version}"
+  info-author: "&7Autor: &e{author}"
+  info-website: "&7Website: &e{website}"
+  info-description: "&7Beschreibung: &f{description}"
+  
+  # Reload
+  reload-success: "&aCBSystem wurde erfolgreich neu geladen!"
+  reload-failed: "&cFehler beim Neu-Laden von CBSystem!"
+  reload-no-permission: "&cDu hast keine Berechtigung für /cb reload!"
+  
+  # Debug
+  debug-enabled: "&aDebug-Modus aktiviert!"
+  debug-disabled: "&cDebug-Modus deaktiviert!"
+  debug-no-permission: "&cDu hast keine Berechtigung für /cb debug!"
+  debug-info: "&7Debug-Informationen werden in der Konsole angezeigt."
 
 # Maintenance-Nachrichten
 maintenance:
