@@ -136,7 +136,7 @@ public class ScoreboardManager {
             addScore(objective, "&6&lPlots", score--);
             
             int plotCount = plugin.getPlotManager().getPlayerPlotCount(player.getUniqueId());
-            int maxPlots = plugin.getPlotManager().getMaxPlotsForPlayer(player.getUniqueId());
+            int maxPlots = plugin.getPlotManager().getMaxPlotsForPlayer(player);
             addScore(objective, "&7Plots: &a" + plotCount + "&7/&e" + maxPlots, score--);
             
             // Aktueller Plot
