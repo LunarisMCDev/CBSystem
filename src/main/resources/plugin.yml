@@ -1,5 +1,5 @@
 name: CBSystem
-version: '1.0.0'
+version: '1.0.1-SNAPSHIT'
 description: Umfangreiches CityBuild System für OP-Games.de
 author: OP-Games.de
 website: https://op-games.de
@@ -56,6 +56,14 @@ commands:
   shop:
     description: Öffne den Shop
     usage: /shop
+  bank:
+    description: Bank-System Befehle
+    usage: /bank [subcommand]
+    aliases: [banking, geldbank]
+  scoreboard:
+    description: Scoreboard-System Befehle
+    usage: /scoreboard [subcommand]
+    aliases: [sb, sidebar]
   tpa:
     description: Teleportationsanfrage senden
     usage: /tpa <player>

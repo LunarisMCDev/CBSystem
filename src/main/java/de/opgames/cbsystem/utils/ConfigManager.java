@@ -403,6 +403,39 @@ public class ConfigManager {
         return config.getBoolean("admin.logging.log-plot-actions", true);
     }
     
+    // Scoreboard-Einstellungen
+    public boolean isScoreboardEnabled() {
+        return config.getBoolean("scoreboard.enabled", true);
+    }
+    
+    public int getScoreboardUpdateInterval() {
+        return config.getInt("scoreboard.update-interval", 20);
+    }
+    
+    public boolean isScoreboardAutoCreate() {
+        return config.getBoolean("scoreboard.auto-create", true);
+    }
+    
+    public String getScoreboardTitle() {
+        return config.getString("scoreboard.title", "&6&lOP-Games.de");
+    }
+    
+    public boolean isScoreboardShowEconomy() {
+        return config.getBoolean("scoreboard.lines.show-economy", true);
+    }
+    
+    public boolean isScoreboardShowPlots() {
+        return config.getBoolean("scoreboard.lines.show-plots", true);
+    }
+    
+    public boolean isScoreboardShowServer() {
+        return config.getBoolean("scoreboard.lines.show-server", true);
+    }
+    
+    public boolean isScoreboardShowRank() {
+        return config.getBoolean("scoreboard.lines.show-rank", true);
+    }
+    
     // Utility-Methoden
     public List<String> getStringList(String path) {
         return config.getStringList(path);

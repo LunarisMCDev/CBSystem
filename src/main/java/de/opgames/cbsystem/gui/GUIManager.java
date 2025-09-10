@@ -108,6 +108,14 @@ public class GUIManager {
     }
     
     /**
+     * Öffnet das Bank-GUI
+     */
+    public void openBankGUI(Player player) {
+        BankGUI gui = new BankGUI(plugin, player);
+        openGUI(player, gui);
+    }
+    
+    /**
      * Öffnet das Spielerverwaltungs-GUI
      */
     public void openPlayerManagementGUI(Player player) {

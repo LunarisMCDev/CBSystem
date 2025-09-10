@@ -24,6 +24,13 @@ public class PlayerJoinQuitListener implements Listener {
         // Lade Spielerdaten asynchron
         plugin.getPlayerDataManager().loadPlayerData(player);
         
+        // Erstelle Scoreboard für den Spieler
+        plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
+            if (player.isOnline()) {
+                plugin.getScoreboardManager().createScoreboard(player);
+            }
+        }, 20L); // 1 Sekunde Verzögerung
+        
         // Begrüßungsnachricht
         if (player.hasPlayedBefore()) {
             // Wiederkehrender Spieler
@@ -93,6 +100,9 @@ public class PlayerJoinQuitListener implements Listener {
         
         // Schließe offene GUIs
         plugin.getGUIManager().closeGUI(player);
+        
+        // Entferne Scoreboard
+        plugin.getScoreboardManager().removeScoreboard(player);
         
         // Breche laufende Teleportationen ab
         plugin.getTeleportManager().cancelTeleport(player);

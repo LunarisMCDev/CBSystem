@@ -1,7 +1,9 @@
 package de.opgames.cbsystem;
 
 import de.opgames.cbsystem.auction.AuctionManager;
+import de.opgames.cbsystem.bank.BankManager;
 import de.opgames.cbsystem.commands.*;
+import de.opgames.cbsystem.scoreboard.ScoreboardManager;
 import de.opgames.cbsystem.database.DatabaseManager;
 import de.opgames.cbsystem.database.PlayerDataManager;
 import de.opgames.cbsystem.economy.EconomyManager;
@@ -33,6 +35,8 @@ public class CBSystem extends JavaPlugin {
     private PlotManager plotManager;
     private TeleportManager teleportManager;
     private AuctionManager auctionManager;
+    private BankManager bankManager;
+    private ScoreboardManager scoreboardManager;
     
     @Override
     public void onEnable() {
@@ -120,6 +124,12 @@ public class CBSystem extends JavaPlugin {
             // Auction Manager initialisieren
             auctionManager = new AuctionManager(this);
             
+            // Bank Manager initialisieren
+            bankManager = new BankManager(this);
+            
+            // Scoreboard Manager initialisieren
+            scoreboardManager = new ScoreboardManager(this);
+            
             return true;
         } catch (Exception e) {
             getLogger().log(Level.SEVERE, "Fehler beim Initialisieren der Manager:", e);
@@ -149,6 +159,8 @@ public class CBSystem extends JavaPlugin {
         getCommand("pay").setExecutor(new PayCommand(this));
         getCommand("shop").setExecutor(new ShopCommand(this));
         getCommand("eco").setExecutor(new EcoCommand(this));
+        getCommand("bank").setExecutor(new BankCommand(this));
+        getCommand("scoreboard").setExecutor(new ScoreboardCommand(this));
         
         // TPA-System
         getCommand("tpa").setExecutor(new TPACommand(this));
@@ -252,5 +264,13 @@ public class CBSystem extends JavaPlugin {
     
     public AuctionManager getAuctionManager() {
         return auctionManager;
+    }
+    
+    public BankManager getBankManager() {
+        return bankManager;
+    }
+    
+    public ScoreboardManager getScoreboardManager() {
+        return scoreboardManager;
     }
 }

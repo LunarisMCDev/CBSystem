@@ -111,6 +111,42 @@ economy:
     max-amount: 100000.0
     tax-percentage: 0.0
 
+# Bank-System
+bank:
+  enabled: true
+  # Zinsen pro Tag (in Prozent)
+  interest-rate: 2.0
+  # Kredit-System
+  loan:
+    enabled: true
+    max-amount: 100000.0
+    max-days: 7
+    interest-rate: 5.0
+  # GUI-Einstellungen
+  gui:
+    title: "&6&lBank &8- &7OP-Games.de"
+    size: 54
+
+# Scoreboard-System
+scoreboard:
+  enabled: true
+  # Update-Intervall in Ticks (20 Ticks = 1 Sekunde)
+  update-interval: 20
+  # Automatisch für neue Spieler erstellen
+  auto-create: true
+  # Titel des Scoreboards
+  title: "&6&lOP-Games.de"
+  # Zeilen-Konfiguration
+  lines:
+    # Economy-Informationen anzeigen
+    show-economy: true
+    # Plot-Informationen anzeigen
+    show-plots: true
+    # Server-Informationen anzeigen
+    show-server: true
+    # Spieler-Rang anzeigen
+    show-rank: true
+
 # Shop-System
 shop:
   enabled: true

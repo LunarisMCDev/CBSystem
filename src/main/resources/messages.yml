@@ -628,6 +628,79 @@ cb:
   debug-no-permission: "&cDu hast keine Berechtigung für /cb debug!"
   debug-info: "&7Debug-Informationen werden in der Konsole angezeigt."
 
+# Bank-System-Nachrichten
+bank:
+  # Allgemeine Nachrichten
+  balance-info: "&7Bankguthaben: &a{bank-balance} &7| Taschengeld: &e{pocket-balance}"
+  deposit-success: "&aDu hast &e{amount} &aerfolgreich eingezahlt!"
+  deposit-failed: "&cEinzahlung fehlgeschlagen!"
+  deposit-usage: "&cVerwendung: &e/bank deposit <betrag>"
+  deposit-help: "&7Verwende &e/bank deposit <betrag> &7um Geld einzuzahlen"
+  withdraw-success: "&aDu hast &e{amount} &aerfolgreich abgehoben!"
+  withdraw-failed: "&cAuszahlung fehlgeschlagen!"
+  withdraw-usage: "&cVerwendung: &e/bank withdraw <betrag>"
+  withdraw-help: "&7Verwende &e/bank withdraw <betrag> &7um Geld abzuheben"
+  
+  # Kredit-Nachrichten
+  loan-granted: "&aKredit über &e{amount} &afür &e{days} Tage &agewährt!"
+  loan-failed: "&cKredit konnte nicht gewährt werden!"
+  loan-usage: "&cVerwendung: &e/bank loan <betrag> [tage]"
+  loan-help: "&7Verwende &e/bank loan <betrag> [tage] &7um einen Kredit zu beantragen"
+  loan-too-large: "&cKredit zu groß! Maximum: &e{max-amount}"
+  loan-too-long: "&cKredit-Laufzeit zu lang! Maximum: &e{max-days} Tage"
+  already-has-loan: "&cDu hast bereits einen aktiven Kredit!"
+  no-active-loan: "&cDu hast keinen aktiven Kredit!"
+  
+  # Kredit-Rückzahlung
+  payloan-success: "&aDu hast &e{amount} &aauf deinen Kredit gezahlt!"
+  payloan-failed: "&cKredit-Rückzahlung fehlgeschlagen!"
+  payloan-usage: "&cVerwendung: &e/bank payloan <betrag>"
+  payloan-help: "&7Verwende &e/bank payloan <betrag> &7um deinen Kredit zurückzuzahlen"
+  
+  # Fehler-Nachrichten
+  insufficient-bank-balance: "&cUnzureichendes Bankguthaben! Du hast nur &e{balance}&c, benötigt: &e{amount}"
+  insufficient-pocket-balance: "&cUnzureichendes Taschengeld! Du hast nur &e{balance}&c, benötigt: &e{amount}"
+  
+  # Info-Nachrichten
+  info-header: "&6&l=== Bank-Informationen ==="
+  loan-info: "&7Aktiver Kredit: &c{remaining} &7von &e{original} &7| Fällig: &c{due-date}"
+  no-loan: "&7Du hast keinen aktiven Kredit"
+  
+  # Hilfe
+  help-header: "&6&l=== Bank-Hilfe ==="
+  help-balance: "&e/bank balance &7- Guthaben anzeigen"
+  help-deposit: "&e/bank deposit <betrag> &7- Geld einzahlen"
+  help-withdraw: "&e/bank withdraw <betrag> &7- Geld abheben"
+  help-loan: "&e/bank loan <betrag> [tage] &7- Kredit beantragen"
+  help-payloan: "&e/bank payloan <betrag> &7- Kredit zurückzahlen"
+  help-info: "&e/bank info &7- Detaillierte Informationen"
+  
+  # GUI-Nachrichten
+  history-coming-soon: "&eTransaktionshistorie kommt bald!"
+  stats-coming-soon: "&eBank-Statistiken kommen bald!"
+  
+  # Fehler
+  invalid-subcommand: "&cUngültiger Unterbefehl: &e{command}"
+
+# Scoreboard-System-Nachrichten
+scoreboard:
+  # Allgemeine Nachrichten
+  enabled: "&aScoreboard aktiviert!"
+  disabled: "&cScoreboard deaktiviert!"
+  already-enabled: "&eScoreboard ist bereits aktiviert!"
+  already-disabled: "&eScoreboard ist bereits deaktiviert!"
+  reloaded: "&aAlle Scoreboards wurden neu geladen!"
+  
+  # Hilfe
+  help-header: "&6&l=== Scoreboard-Hilfe ==="
+  help-toggle: "&e/scoreboard toggle &7- Scoreboard ein/ausschalten"
+  help-on: "&e/scoreboard on &7- Scoreboard aktivieren"
+  help-off: "&e/scoreboard off &7- Scoreboard deaktivieren"
+  help-reload: "&e/scoreboard reload &7- Scoreboards neu laden (Admin)"
+  
+  # Fehler
+  invalid-subcommand: "&cUngültiger Unterbefehl: &e{command}"
+
 # Maintenance-Nachrichten
 maintenance:
   enabled: "&cWartungsmodus aktiviert!"
