@@ -16,7 +16,7 @@ public class BankGUI extends BaseGUI {
     private final BankManager bankManager;
     
     public BankGUI(CBSystem plugin, Player player) {
-        super(plugin, player, 54, "&6&lBank &8- &7OP-Games.de");
+        super(plugin, player, "&6&lBank &8- &7OP-Games.de", 54);
         this.bankManager = new BankManager(plugin);
         setupGUI();
     }
@@ -159,10 +159,7 @@ public class BankGUI extends BaseGUI {
     }
     
     @Override
-    protected void handleClick(InventoryClickEvent event) {
-        event.setCancelled(true);
-        
-        int slot = event.getSlot();
+    public void handleClick(int slot, ItemStack clickedItem, boolean isShiftClick, boolean isRightClick) {
         
         switch (slot) {
             case 20 -> { // Einzahlung

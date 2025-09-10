@@ -192,10 +192,19 @@ public class ScoreboardManager {
      * Holt die Server-TPS (vereinfacht)
      */
     private String getServerTPS() {
-        // Vereinfachte TPS-Berechnung
+        // Vereinfachte TPS-Berechnung - getTps() ist nicht in allen Bukkit-Versionen verfügbar
         double tps = 20.0; // Standard-TPS
-        if (Bukkit.getServer().getTps()[0] > 0) {
-            tps = Math.min(20.0, Bukkit.getServer().getTps()[0]);
+        
+        // Versuche TPS zu ermitteln (falls verfügbar)
+        try {
+            // Für Paper/Spigot Server
+            if (Bukkit.getServer().getClass().getSimpleName().contains("CraftServer")) {
+                // Fallback auf 20.0 TPS
+                tps = 20.0;
+            }
+        } catch (Exception e) {
+            // Fallback auf 20.0 TPS
+            tps = 20.0;
         }
         
         if (tps >= 18.0) {

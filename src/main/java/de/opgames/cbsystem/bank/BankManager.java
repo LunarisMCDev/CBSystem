@@ -136,7 +136,7 @@ public class BankManager {
         if (currentBalance < amount) return false;
         
         // Geld vom Spieler nehmen
-        if (!plugin.getEconomyManager().removeBalance(playerUUID, amount, "Bank-Einzahlung")) {
+        if (!plugin.getEconomyManager().withdrawBalance(playerUUID, amount, "Bank-Einzahlung")) {
             return false;
         }
         
@@ -320,7 +320,7 @@ public class BankManager {
                 }
                 
                 // Geld vom Spieler nehmen
-                if (!plugin.getEconomyManager().removeBalance(playerUUID, paymentAmount, "Kredit-Rückzahlung")) {
+                if (!plugin.getEconomyManager().withdrawBalance(playerUUID, paymentAmount, "Kredit-Rückzahlung")) {
                     throw new SQLException("Fehler beim Abziehen des Geldes");
                 }
                 
